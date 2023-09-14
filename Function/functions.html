@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+
+   
+<h3>Out put</h3>
+
+<!-- arrow function -->
+<input id="textBox" type="text" />
+<div id="output"></div>
+    
+    <script>
+         
+        //basic Sytanx
+        //  function myFunction() {
+        //     alert('Hello');
+        //  }
+
+        //  myFunction();
+
+
+         const string = 'I am a string';
+         const newString = string.replace('string', 'Warren');
+
+         document.querySelector('h3').textContent=newString;
+
+
+         const joinArray = ["I", "love", "chocolate", "frogs"];
+         const newJoin = joinArray.join("--"); // joins array with text inside()
+         console.log(newJoin);
+         
+
+
+         function myName(name ='Warren'){// assigning default value to a parameter
+            console.log(`Hello ${name}`);
+         }
+
+         myName(); /// prints Warren
+         myName('Roan'); /// prints Roan
+
+
+         (function (){ //// anonymous function
+            console.log('anon');
+         });
+
+
+        const originals = [1, 2, 3];
+        const doubled = originals.map(item => item * 2);
+        console.log(doubled); // [2, 4, 6]
+
+
+        ///Arrow Functions sample
+        const textBox = document.querySelector("#textBox");
+        const output = document.querySelector("#output");
+
+        textBox.addEventListener("keydown", (event) => {
+        output.textContent = `You pressed "${event.key}".`;
+        });
+
+        
+
+    </script>
+
+</body>
+</html>

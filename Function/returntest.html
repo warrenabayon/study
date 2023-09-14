@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        input {
+            font-size: 2em;
+            margin: 10px 1px 0;
+        }
+    </style>
+
+</head>
+<body>
+    
+
+    <input class="inputNUmber"> 
+    <p></p>
+
+
+    <!-- <div id="test-btn">
+        The following element contains some
+        <bold>bold</bold> and
+        some <italic>italic text</italic>.
+    </div> -->
+
+
+
+    <script>
+
+        //assign the value
+        const input = document.querySelector('input');
+        const text = document.querySelector('p');
+
+        //event call
+
+        input.addEventListener('change', () => {
+            const num = parseFloat(input.value);
+
+            //using ?
+            // text.textContent = (isNaN(num))? 'Enter A number' :
+            // `f1: ${squared(num)} f2: ${cubed(num)} f3: ${factorial(num)}`;
+
+            if (isNaN(num)) {
+                text.textContent = 'Enter A Number';
+            } else {
+                text.textContent = `f1: ${squared(num)}`;
+                text.textContent += `f2 ${cubed(num)}`;
+                text.textContent += `f3 ${factorial(num)}`;
+            }
+        })
+
+        function squared(num) { // 
+        return num * num;
+        }
+
+        function cubed(num) {
+            return num * num * num;
+        }
+
+        function factorial(num) {
+            if (num < 0) return undefined;
+            if (num === 0) return 1;
+            let x = num - 1;
+            while (x > 1) {
+                num *= x;
+                x--;
+            }
+            return num;
+        }
+
+        // console.log(document.getElementById('test-btn').textContent);
+
+    </script>
+</body>
+</html>

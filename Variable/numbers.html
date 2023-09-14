@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numbers</title>
+</head>
+<body>
+    
+
+    <button>Start machine</button>
+    <p>The machine is stopped.</p>
+
+    <script>
+        let y = 0.2 + 0.1;
+        y = (0.2 * 10) + (0.1 * 10) /10
+        console.log(y);
+
+
+        let x = 10;
+        let a = 20;
+        let z = "30";
+        let result = x + a + Number(z);
+        console.log(result);
+
+        const myint = 5;
+        const myFloat = 6.667;
+
+        console.log(typeof myFloat);
+
+
+        const longNumber = 1.032130546412354;
+        console.log(longNumber.toFixed(1));
+
+
+           // exponent
+
+        console.log( 5 ** 2); //5 * 5
+
+        //increment decrement
+
+        let score = 0 ;
+        score+=2;
+        console.log(score);
+        score+=5;
+        console.log(score);
+
+        //button
+
+        const btn = document.querySelector("button");
+        const txt = document.querySelector("p");
+
+        btn.addEventListener("click", updateBtn );
+
+        function updateBtn() {
+            if (btn.textContent ==='Start machine'){
+                btn.textContent ='Stop machine';
+                txt.textContent = 'Machine start working';
+            } else {
+                btn.textContent = 'Start machine';
+                txt.textContent = 'Machine stop working'
+            }
+        }
+
+
+        const 
+            var1 = 8, 
+            var2 = 9, 
+            var3 = 20,
+            var4 = 64;
+
+        let 
+            res1 = var1 + var2, 
+            res2 = var3 - var4,
+            finalResult = res1 * res2,
+            evenOddResult = finalResult % 2;
+
+            if (evenOddResult === 0){
+                console.log(`${finalResult} is Even`);
+            } else {
+                console.log(`${finalResult} is Odd`);
+            }
+
+        console.log(Number(''));
+
+        /*COnvert to number*/
+
+        let apples = '5';
+        let orange = '9';
+
+        console.log (+apples + +orange); //SHORTER
+        console.log(Number(apples) + Number(orange)); //LONGER
+
+    </script>
+</body>
+</html>

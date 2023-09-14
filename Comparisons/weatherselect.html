@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select the weather type today:</title>
+</head>
+<body>
+    <h3>Select the weather</h3>
+
+    <select id ='weather'>
+        <option value="">--Make a choice--</option>
+        <option value="sunny">Sunny</option>
+        <option value="rainy">Rainy</option>
+        <option value="snowing">Snowing</option>
+        <option value="overcast">Overcast</option>
+    </select>
+
+    <p></p>
+
+    
+
+    <script>
+        const select = document.querySelector('select');
+        const message = document.querySelector('p');
+
+        select.addEventListener("change", selectWeather);
+
+        function selectWeather() {
+            const choice = select.value;
+
+            if (choice === 'sunny') {
+                message.textContent = 'Sunny';
+
+            } else if (choice == 'rainy') {
+                message.textContent = 'Rainy';
+                
+            } else if (choice='snowing'){
+                message.textContent='Snowing';
+            }
+
+        }
+
+
+
+        let cheese = " ";
+
+        if (cheese) {
+        console.log("Yay! Cheese available for making cheese on toast.");
+        } else {
+        console.log("No cheese on toast for you today.");
+        }
+
+        if ((x === 5 || y > 3 || z <= 10) && (loggedIn || userName === "Steve")) {
+  // run the code
+}
+
+
+    </script>
+</body>
+</html>

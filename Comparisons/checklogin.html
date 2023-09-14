@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check The Login</title>
+</head>
+<body>
+
+    <h3> Check the login</h3>
+    <p id="text1">lorem ipsum dolor sit amit</p>
+  
+
+    <button id ='begin'onclick="
+    meLogin();
+    ">Begin Login</button>
+
+    <script>
+
+
+    function meLogin(){
+
+        let userName = prompt("Who's there?", 'Enter Username')
+        
+
+        if (userName ==='Admin'){
+            let password = prompt("What's the password?", 'Enter Password');
+            if (password ==='TheMaster') {
+                document.getElementById('text1').innerHTML=`Welcome! ${userName}`;
+            } else {
+                document.getElementById('text1').innerHTML="Wrong Password!";
+            }
+            
+        } else {
+            document.getElementById('text1').innerHTML="I don't know you";
+            document.getElementById('begin').innerHTML='Try again';
+        } 
+    }
+
+
+
+    </script>
+    
+</body>
+</html>

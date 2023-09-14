@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- <input class="inName"> -->
+    <p></p>
+
+    <script>
+    //pass
+    const animalName = document.querySelector('.inName');
+    const outPut = document.querySelector('p');
+
+    const inName = prompt('Type Animal name')
+
+    function myAnimal(inName) {
+        if (containsLettersOnly(inName)) {
+            return inName + ' is my chosen animal';
+        } else {
+            return 'Enter Animal';
+        }
+        
+    }
+
+    outPut.textContent = myAnimal(inName);
+    // animalName.addEventListener('change', () => {
+    //     const name = animalName.value;
+    //     if (containsLettersOnly(name)) {
+    //         outPut.textContent = name
+    //     } else {
+    //         outPut.textContent = 'Enter A name';
+    //     }
+        
+        
+    // } )// version 1 using arrow =>
+    
+
+    function containsLettersOnly(input) {
+    // Regular expression pattern to match letters only
+        var letterPattern = /^[A-Za-z]+$/;
+        
+        // Test the input against the pattern
+        return letterPattern.test(input);
+    }
+
+
+    </script>
+</body>
+</html>

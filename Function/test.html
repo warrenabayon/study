@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+    </style>
+</head>
+<body>
+    <!-- <section></section> -->
+    
+    
+    <section class="preview">
+
+    </section>
+
+  </body>
+  <script>
+    const names = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada']
+    const para = document.createElement('p'); //creating the p tag
+
+    // Add your code here
+    function choseName(){
+
+      const randomName = Math.floor(Math.random()* names.length);    
+      // console.log(randomName);  
+      const txtNode = document.createTextNode(names[randomName]);
+      para.appendChild(txtNode);
+    }
+   
+    const name = choseName();
+    console.log(name)
+   
+    // Don't edit the code below here!
+
+    const section = document.querySelector('section');
+
+    section.appendChild(para);
+  </script>
+</body>
+</html>
+

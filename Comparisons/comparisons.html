@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparison</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    
+    <p id="demo">Good Evening</p>
+    <p id="day"> today is </p>
+    <p id="status">Store</p>
+    <p id="allowed">allowed?</p>
+    <p id="multi">Multi ?</p>
+
+    <script>
+
+
+        //if else
+        const date = new Date();
+        const hour = date.getHours();
+
+        if (hour < 10) {   
+            document.getElementById('demo').innerHTML='Good Morning';
+
+        } else if (hour < 20) {
+            document.getElementById('demo').innerHTML ='Good Day';
+
+        } else {
+            document.getElementById('demo').innerHTML = 'Good Evening';
+        }
+
+        console.log(hour);
+
+        // switch
+        let day;
+        switch ( new Date().getDay()) {
+            case 0:
+                day = "Sunday";
+                break;
+            case 1:
+                day = "Monday";
+                break;
+            case 2:
+                day = "Tuesday";
+                break;
+            case 3:
+                day = "Wednesday";
+                break;
+            case 4:
+            case 5:
+                day = "Soon Its weekend"; //case 4 and 5 share the same code block .. for same result
+                break;
+            case  6:
+                day = "Saturday";
+            default:
+                day = 'Looking forward to the weekend'; /// default
+        }
+
+        document.getElementById('day').innerHTML = `Today is ${day} --- ${new Date().getDay()}`;
+
+
+        /// Logical operators
+
+        let oras = new Date().getHours();
+
+        if (oras < 7 || oras > 19){
+            document.getElementById('status').innerHTML=`the store is closed ${oras}`;
+        } else {
+            document.getElementById('status').innerHTML='the store is open'
+        }
+
+
+
+/*
+        let accessAllowed;
+        let age = prompt('how old are you?','Type a number');
+
+        if (age >= 18) {
+            accessAllowed = true;
+        } else {
+            accessAllowed = false;
+        }
+
+        // alert(accessAllowed);
+
+        /////TERNARY ?
+        let accessAllowed2 = (age >= 18) ? true : false;
+        document.getElementById('allowed').innerHTML = accessAllowed2;
+*/
+        ///multi ?
+
+        let yourAge = prompt('enter age', 'number');
+        let message = (yourAge <= 18) ? 'minor' : 
+            (yourAge <= 30) ? 'middle' :
+            (yourAge <= 60) ? 'senior' :
+            (yourAge <= 90) ? 'legend' : 
+            'too old';
+
+        document.getElementById('multi').innerHTML = message;
+
+        /// converted on if else
+        if (yourAge <= 18) {
+            message = 'minor';
+        } else if (yourAge <=30) {
+            message = 'middle';
+        } else if (yourAge <= 60) {
+            message = 'senior';
+        } else if (yourAge <= 90) {
+            message ='legend';
+        } else {
+            message = 'too old';
+        }
+
+        /// sample not assing to result
+
+        let company = prompt('Which company created JavaScript?', '');
+        (company==='Netscape') ? alert('right') : alert('wrong');
+ 
+        //converted
+        let company2 = prompt('Which company created JavaScript?', '');
+
+        if (company2 = 'Net') {
+            alert('Right');
+        } else {
+            alert('Wrong');
+        }
+
+    </script>
+</body>
+</html>

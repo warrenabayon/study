@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+/*
+Extracting String Parts
+There are 3 methods for extracting a part of a string:
+
+slice(start, end)
+substring(start, end)
+substr(start, length)
+*/
+
+    <script>
+
+        /*
+        let text = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        console.log(text.length); //lenght of the text
+        */
+
+        //SLICE
+        let text2 = "Apple, Banana, Kiwi";
+        console.log(text2.slice(7, 13));//7th letter // end in 13th letter //note count start at 0
+        /*
+        console.log(text2.slice(7)); // this cut in front and remain the text after 7th
+        console.log(text2.slice(-8)); //  this will start in reverse
+        console.log(text2.slice(-13, -8)); //This example slices out a portion of a string from position -13 to position -8:
+        */
+
+        //SUB-STRING 
+        let text3 ='Apple, Banana, Kiwi';
+        console.log(text3.substring(7, 13));
+        // console.log(text3.substring(-13, 7));
+
+        //SUBSTR
+        let text4 ='Apple, Banana, Kiwi';
+        console.log(text4.substr(7, 10));
+
+        //RECPLACE
+        let text5 = 'Please visit Microsoft! Microsoft';
+        console.log(text5.replace('Microsoft', 'My House'));//// replace the text inside a string // replace is case sensitive and first mathch
+        console.log(text5.replace(/MICROSOFT/i, 'My House')) // use /i for insensitive case
+        console.log(text5.replace(/Microsoft/g, 'My house')) // to replace all exact match use /g
+
+
+        //replaceAll()
+        let  text6 = 'I love cats. Cats are very easy to love. Cats are very popular.';
+        console.log(text6.replaceAll('Cats','Dogs'));
+        console.log(text6.replaceAll('cats', 'dogs'));
+        //global
+        console.log(text6.replaceAll(/Cats/g, 'Dogs'));
+        console.log(text6.replaceAll(/cats/g, 'dogs'));
+
+        //Converting to Upper and Lower Case
+
+        let text7 = 'Hello World';
+        console.log(text7.toUpperCase()); // convert text string to uppercase
+        console.log(text7.toLowerCase()); // convert to lowercase
+        
+        // string contat() : joins two or more strings
+        let text8 ='Hello';
+        let text9 = 'World';
+        console.log(text8.concat(' ',text9));
+
+
+        //trim() removes white space from start and end
+
+        let text10 = '      Hello World! Trim this     ';
+        console.log(text10.trim());
+        console.log(text10.trimStart()); //removes white space from start
+        console.log(text10.trimEnd()); //removes white space from end
+
+
+        //JavaScript String Padding
+        let text11 = '5';
+        let text12 = text11.padStart(4, '0'); ///Pad a string with "0" until it reaches the length 4
+        console.log(text12);
+        let  text13 = text11.padStart(4, 'x'); ///Pad a string with "x" until it reaches the length 4
+        console.log(text13);
+        
+
+
+        //Extracting String Characters
+        //charAt()
+        let text14='Hellow World';
+        console.log(text14.charAt(0)); //returns the character of a specifed index
+        //charCodeAt
+        console.log(text14.charCodeAt(0)); //  returns in unicode value of character
+        //property access
+        console.log(text14[0]); // property access on string
+
+
+        //Converting a String to an Array
+        //split()  -- converts string to array
+
+        let text15 ='a,b,c,d,e,f';
+        const myArray = text15.split(','); // spliting to array
+        console.log(myArray[3]); // display charcater by index
+
+        /// If the separator is "", the returned array will be an array of single characters:
+        let text16 = "aaa,b,c,d,e,f";
+        const myArr = text16.split("");
+
+        text16 = "";
+        for (let i = 0; i < myArr.length; i++) {
+        text16 += myArr[i] + "<br>"
+        }
+
+        console.log(text16);
+
+
+
+        ///indexOf()
+   
+        const paragraph = 'The quick brown fox jumps over the lazy dog. If the dogs barked, dog was it really lazy?';
+
+        const searchTerm = 'dog';
+        const indexOfFirst = paragraph.indexOf(searchTerm);
+
+        console.log(`The index of the first "${searchTerm}" from the beginning is ${indexOfFirst}`);
+        // Expected output: "The index of the first "dog" from the beginning is 40"
+
+        console.log(`The index of the 2nd "${searchTerm}" is ${paragraph.indexOf(searchTerm, indexOfFirst + 2)}`);
+        // Expected output: "The index of the 2nd "dog" is 52"
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

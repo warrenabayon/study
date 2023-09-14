@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks</title>
+</head>
+<body>
+
+
+<h3>The name of JavaScript?</h3>
+<p>Answer: <span id="js-name"></span></p>
+
+<h3>Show The Sign</h3>
+<p>Answer: <span id="sign-show"></span></p>
+
+<h3>Rewrite 'if..else' into '?'</h3>
+<p>Answer: <span id="login"></span></p>
+
+    <script>
+        /*
+        //test 1
+        let jsName = prompt('What is the “official” name of JavaScript?','type here');
+        
+        ///using terndary ?
+        (jsName === 'ECMAScript') ? console.log('RIGHT') :
+            console.log('You don\'t know');
+
+        /// using if else
+
+        if (jsName !== 'ECMAScript') { //I used not
+            document.getElementById('js-name').innerHTML ='Wrong answer';
+        } else {
+            document.getElementById('js-name').innerHTML ='Correct';
+        }
+        */
+
+        /*
+        //test2
+        let sign = +prompt('I need a number', 'Type here...');
+        if (sign > 0 ){ 
+            document.getElementById('sign-show').innerHTML = 1;         
+        } else if (sign < 0 ) {
+            document.getElementById('sign-show').innerHTML = -1;  
+        } else if (sign === 0) {
+            document.getElementById('sign-show').innerHTML = 0;  
+        }
+
+        /// ? ternary
+        (sign > 0 ) ? console.log(1) :
+            (sign < 0) ? console.log(-1) :
+            (sign === 0)? console.log(0): console.log('unknown');
+        */
+
+        /*
+        //test 3
+        let result;
+        if (a + b < 4) {
+        result = 'Below';
+        } else {
+        result = 'Over';
+        }
+
+        //ternary ?
+        let result = (a + b < 4) ? 'Bellow' : 'Over';
+        */
+
+        /*
+        ///test 4
+
+        // let message;
+        // if (login == 'Employee') {
+        // message = 'Hello';
+        // } else if (login == 'Director') {
+        // message = 'Greetings';
+        // } else if (login == '') {
+        // message = 'No login';
+        // } else {
+        // message = '';
+        // }
+        
+        
+        let login = prompt('Enter Login','Position');
+        let message = (login == 'Employee') ? 'Hello' :
+            (login == 'Director') ? 'Greetings' : 
+            (login == '') ? 'No Login' : 
+            'outside';
+
+        document.getElementById('login').innerHTML = message;
+        */
+
+
+        //TASK SWITCH
+
+        // let browser = prompt('enter browser name:');
+        // switch (browser) {
+        // case 'Edge':
+        //     alert( "You've got the Edge!" );
+        //     break;
+
+        // case 'Chrome':
+        // case 'Firefox':
+        // case 'Safari':
+        // case 'Opera':
+        //     alert( 'Okay we support these browsers too' );
+        //     break;
+
+        // default:
+        //     alert( 'We hope that this page looks ok!' );
+        // }
+
+
+        // let browser = prompt('enter browser name:');
+
+        //using if 
+        // if (browser==='Edge') {
+        //     alert( "You've got the Edge!" );
+        // } else if (browser === 'Chrome' || browser === 'Firefox' || browser === 'Safari' || browser === 'Opera') {
+        //     alert( 'Okay we support these browsers too' );
+        // } else {
+        //     alert( 'We hope that this page looks ok!' );
+        // }
+
+
+        //using ?
+        // let message2 = (browser ==='Edge') ? "You've got the Edge!" : 
+        //     ((browser === 'Chrome') || (browser === 'Firefox') || (browser === 'Firefox')) ? 'Okay we support these browsers too' : 
+        //     'We hope that this page looks ok!';
+
+            // document.getElementById('login').innerHTML = message2;
+
+        /// using case
+
+        /*
+        let message3;
+
+            switch (browser){
+                case 'Edge':
+                    message3 = "You've got the Edge!";
+                    break;
+                case 'Firefox':
+                case 'Chrome':
+                case 'Safari':
+                    message3 = 'Okay we support these browsers too';
+                default:
+                    message3 = 'We hope that this page looks ok!';
+
+            }
+            document.getElementById('login').innerHTML = message3;
+            */
+
+            const firstName = 'Carlos',
+  lastName = 'Stevenson',
+  thisYear = 1948,
+  birthYear = '1965';
+
+// const greeting = `Hello my name is ${firsName} ${lastName} and I am ${thisYear - +birthYear} years old`;
+
+console.log(thisYear - +birthYear);
+
+    </script>
+    
+</body>
+</html>
