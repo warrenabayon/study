@@ -3,9 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Function Expression</title>
 </head>
 <body>
     
+
+<script>
+
+/*
+function sayHi() {
+  alert( "Hello" );
+}
+
+
+let func = sayHi; //copy the function
+
+func(); //Hello
+sayHi(); //Hello
+
+// alert(sayHi);/// shows the function code
+
+//using function expressions
+let sayHi2 = function() {
+  alert( "Hello2" );
+}; // semi colon at  the end
+
+sayHi2();
+
+*/
+
+///CALL BACK FUNCTION
+
+///function expression
+
+let age = prompt("What is your age?", 18);
+
+let welcome; /// outside scope
+
+if (age < 18) {
+
+  welcome = function() {
+    alert("Hello!");
+  };
+
+} else {
+
+  welcome = function() {
+    alert("Greetings!");
+  };
+
+}
+
+welcome(); // ok now // outside scope
+
+
+/// ??
+// in  this we can use the function value outside its scope
+let welcome2 = (age < 18) ? function() {alert("Hello")} :
+    function() {alert('Greetings')} 
+
+welcome2();
+
+</script>
+
 </body>
 </html>
