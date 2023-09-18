@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<body>
+
+
+<h3>Task</h3>
+<p>Output</p>
+
+    <script>
+        // let func = (arg1, arg2, ..., argN) => expression;
+
+        /*
+
+        let sum =(a=1 , b=1) => a + b;
+        alert(sum(10, 10));
+
+
+        let double = n => n * 2; // if only one parameter we can remove the ()..unless we assign a default value
+        alert(double(2));
+
+        let sayHi = () => alert('Hello'); /// if no parameter we still need the ()
+        sayHi();
+
+        */
+
+         /*
+
+        let age = prompt("What is your age?", 18); //get input data pass to age
+
+
+        let message = (age < 18) ?  /// pasa natin sa message . condition  the pass to function using arrow
+            () => alert('Hello ' + age) : // one line function
+            () => alert('Greetings ' + age);
+        message(); // call the function
+
+        */
+
+        /*
+        let sum = (a , b) => {  //brackets allow us to write multiple statements inside the function, but we need an explicit return to return something.
+
+            let result = a + b;
+            return result; // here return
+        };
+
+    
+        alert(sum(8, 98));
+        */
+
+
+        /////TASK///
+        /*
+        function ask(question, yes, no) {
+            if (confirm(question)) yes();
+            else no();
+            }
+
+        ask(
+            "Do you agree?",
+            function() { alert("You agreed."); },
+            function() { alert("You canceled the execution."); }
+            );
+
+        */
+        // ANSWER
+
+        let ask = (question,yes,no) => (confirm(question)) ? yes() : no();
+       
+
+        ask("Do you agree?", 
+            () => alert("You agreed."),
+            () => alert("You canceled the execution.")
+            );
+
+    </script>
+    
+</body>
+</html>

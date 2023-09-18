@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+</head>
+<body>
+
+    <h1><a href="https://www.theodinproject.com/lessons/foundations-fundamentals-part-3"
+        target="_blank">Assignment</a></h1>
+
+        
+        For now, just write each function and test the output with console.log.
+
+        Write a function called add7 that takes one number and returns that number + 7.
+        Write a function called multiply that takes 2 numbers and returns their product.
+        Write a function called capitalize that takes a string and returns that string with only the first letter capitalized. Make sure that it can take strings that are lowercase, UPPERCASE or BoTh.
+        Write a function called lastLetter that takes a string and returns the very last letter of that string:
+        lastLetter("abcd") should return "d"
+        <p></p>
+
+    <script>
+
+        function add7(num1){ //no. 1
+            return num1 + 7;
+        }
+
+        //convert
+        const addN = (n1) => n1 + 7
+
+        document.querySelector('p').textContent = addN(15) + ' - ';
+
+
+
+        function multiply(num2,num3){ //no. 2
+            return num2 * num3;
+        }
+
+        //convert
+        const multi = (n2, n3) => n2 * n3;
+        
+        document.querySelector('p').textContent += multi(8, 2) + ' - ';
+
+        function capitalize(text) {
+            if (typeof(text) ==='string'){
+                return text.charAt(0).toUpperCase() + text.slice(1);
+            }else {
+               return alert('not a string');
+            }
+        }
+
+        //convert
+        const capital = (txt) => {
+            return (typeof(txt) === 'string') ? txt.charAt(0).toUpperCase() + txt.slice(1) :
+            alert('Not A String');
+        }
+
+        console.log(capital('122132'));
+
+
+        function lastLetter (letter){
+            const text2 = letter;
+            return text2.charAt(text2.length -1);
+        }
+
+       
+
+
+        //convert
+        const lastL = (txt2) => {
+            return txt2.charAt(txt2.length -1);
+        }
+
+        // console.log(lastL('abcd'));
+        document.querySelector('p').textContent += lastL('qyz');
+
+
+        
+
+
+
+       ///
+       /*
+        
+        const loops = parseInt(prompt('Enter A number','Number here....'))
+        let i = loops;
+
+        for (i = 1; i <= 30; i++) {
+            if (i % 3 === 0 && i % 5 === 0) {
+                console.log('Fizz BUzz');
+            }
+            else if(i % 3 === 0) {
+                console.log('Fizz');
+            } else if (i % 5 === 0){
+            console.log('Buzz');
+            } else {
+                console.log(i);
+            }
+          
+
+        }
+       */
+
+       //gets a 3rd highest
+
+        const myArray = ['20','120','111','215','54','78'];
+        let numArray = myArray.map(str => parseInt(str));
+        const maxNum = Math.max(...numArray);
+        
+        console.log(maxNum); // get the first max
+
+        const newArray = numArray.filter(item => item !== maxNum);
+        console.log(newArray);
+        
+        const newArray2 = newArray.filter(item => item !== Math.max(...newArray)); //remove the max
+        console.log(newArray2);
+
+        numArray = newArray;
+        
+      
+        
+       
+
+       
+
+      
+
+
+    </script>
+</body>
+</html>

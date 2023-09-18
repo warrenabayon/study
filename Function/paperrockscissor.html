@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Updated Game</title>
+
+    <style>
+        .fight {
+        display: flex;
+        gap: 50px;
+    }
+
+        p.result {
+        color: red;
+    }
+
+        .score {
+        display: flex;
+        gap: 50px;
+    }
+
+        /* button {
+        padding: 10px 30px;
+        border: 1px solid #ddd;
+    } */
+
+    </style>
+
+
+
+</head>
+<body>
+
+<div class="fight">
+    <p>Computer Pick: <span class="computer-pick"></span></p>
+    <p>VS</p>
+    <p>User Pick: <span class="user-pick"></span></p>
+</div>
+
+<p class="result">Result: <span class="result"></span></p>
+
+<div class="btn-choices">
+    <button onclick="
+        playGame('ROCK');
+        ">ROCK</button>
+
+    <button onclick="
+    playGame('PAPER');
+    ">PAPER</button>
+
+    <button onclick="
+    playGame('SCISSOR');
+    ">SCISSOR</button>
+
+    <button onclick="playGame('RESET');">TEST BUTTON</button>
+</div>
+
+<h3>Score</h3>
+<div class="score">
+    <p>Computer: <span class="c-score">0</span></p>
+    <p>User: <span class="u-score">0</span></p>
+</div>
+
+
+<script>
+
+
+// random computer numer to 3 for rock, paper and scissor
+// print computer chosen number and equivalent
+// choose 3 button to counter computer pick
+// print the winner ressult
+// keep records of the score for user and computer
+// create a reset buttom
+
+
+
+let cScore = 0;
+let uScore = 0;
+
+
+
+function playGame(userPick){
+
+const randomNumber = Math.floor(Math.random() * 3) + 1;
+// console.log(randomNumber);
+
+let computerPick = ''; // set to let since it changes value
+let fightResult = '';
+
+if (userPick === 'RESET') {
+        fightResult = "SCORE RESET";
+        uScore = 0; 
+        cScore = 0;
+    } else {
+
+
+        if (randomNumber === 1) {
+    computerPick = 'ROCK';  
+    
+    if (userPick ==='ROCK'){
+        fightResult = "IT'S A DRAW";
+    } else if (userPick === 'PAPER') {
+        fightResult = "USER WIN";
+        uScore++; 
+    } else if (userPick = 'SCISSOR') {
+        fightResult = "COMPUTER WIN";
+        cScore++; 
+    } 
+
+} else if (randomNumber === 2) {
+    computerPick = 'PAPER';
+
+    if (userPick ==='ROCK'){
+        fightResult = "COMPUTER WIN";
+        cScore++; 
+    } else if (userPick === 'PAPER') {
+        fightResult = "IT'S A DRAW";
+    } else if (userPick = 'SCISSOR') {
+        fightResult = "USER WIN";
+        uScore++; 
+    }
+
+} else  {
+    computerPick = 'SCISSOR';
+
+    if (userPick ==='ROCK'){
+        fightResult = "USER WIN";
+        uScore++; 
+    } else if (userPick === 'PAPER') {
+        fightResult = "COMPUTER WIN";
+        cScore++; 
+    } else if (userPick = 'SCISSOR') {
+        fightResult = "IT'S A DRAW";
+    }
+}
+
+    }
+
+
+
+//RESET
+
+
+
+document.querySelector('.computer-pick').textContent = computerPick;
+document.querySelector('.user-pick').textContent = userPick;
+document.querySelector('.result').textContent = fightResult;
+console.log('c '+ cScore);
+console.log('u ' + uScore);
+document.querySelector('.c-score').textContent = cScore.toString();
+document.querySelector('.u-score').textContent = uScore.toString();
+
+}
+
+
+
+// const result = (randomNumber === 1) ? 'ROCK' :
+//             (randomNumber === 2) ? 'PAPER' :
+//             'SCISSOR';
+
+/*
+ //CONVERT TO ARROW FUNCTION WITH ??? CONDITION           
+const result = () => {
+    return (randomNumber === 1) ? 'ROCK': 
+            (randomNumber === 2) ? 'PAPER' : 'SCISSOR';
+   
+};
+
+console.log(result());
+*/
+
+
+
+</script>
+
+
+    
+</body>
+</html>
+
