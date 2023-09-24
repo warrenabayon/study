@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+
+    <p id ='demo'></p>
+    <p id ="loop"></p>
+    <p id ="for-loop">loop</p>
+
+    <script>
+
+        let funArray = () => {return 'THIS IS A FUNCTION INSIDE'}; 
+        const objectArray = {staus : 'Maried', age : 30};
+
+        const teacherArray = [
+            'Hanna',
+            'Jana',
+            'Waron'
+        ];
+        const studentArray = [
+            'Warren', 
+            'Roan', 
+            'Hailey',
+            'Abayon',
+            teacherArray, //aray inside
+            funArray,     //function inside
+            objectArray   //objec inside
+        ];
+
+
+    scanStudentName();
+
+    
+        
+    
+    function scanStudentName(){
+
+        for (i = 0; i < studentArray.length; i++) {
+        document.getElementById('loop').innerHTML += studentArray[i] + "<br>";
+        console.log(i);
+
+        findHailey();
+        console.log(studentArray); // check the value
+    }
+
+
+    }
+    
+    function findHailey(){
+        if (studentArray[i]==='Hailey') {
+            studentArray[i] +=' Eternity'; // change value in arraystundent
+            console.log('Baby ko makulit');
+      }
+    }
+
+
+    ///ACCESSING ARRAY USING FOR LOOP
+
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    let flen = fruits.length;
+    
+    let text = '<ol>'
+    for (i = 0; i < flen; i++){
+        text += `<li> ${fruits[i]} </li>`
+    }
+    text += '</ul>'; //end list
+    document.getElementById('for-loop').innerHTML = text;
+
+    </script>
+</body>
+</html>
