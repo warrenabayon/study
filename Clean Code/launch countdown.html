@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active learning: Launch countdown</title>
+</head>
+<body>
+
+
+    <h1>Active learning: Launch countdown</h1>
+    <p id ="demo"></p>
+    <div class="output">
+
+    </div>
+
+    <script>
+  
+
+        
+        
+
+        function createElement(text) {
+            const output = document.querySelector('.output');
+            // output.innerHTML = "";
+            const para = document.createElement('p');
+            output.appendChild(para)
+            para.textContent = text +' ' + i;
+        }
+        
+
+        // for (i = 10; i > -1; i--) {
+        //     if (i === 10) {
+        //         createElement('Countdown ');
+        //     } else if (i === 0) {
+        //         createElement('Blast Off!');
+        //     } else {
+        //         createElement('number ');
+        //     }
+            
+        // }
+
+
+        let i = 10;
+        while (i >= 0){
+            const output = document.querySelector('.output');
+            const para = document.createElement('p');
+            output.appendChild(para); // add the created element to the div.output
+            para.textContent = "test"
+
+            if (i === 10){
+                para.textContent = `Start Countdown in ${i}`;
+            } else if (i === 0) {
+                para.textContent = `Count Finished!!!`
+            } else {
+                para.textContent = `number ${i}`;
+            }
+
+            i--;
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active learning: Filling in a guest list</title>
+</head>
+<body>
+    <h1>Active learning: Filling in a guest list</h1>
+    <p id ='admitted'>Admitted: </p>
+    <p id ='refused'>Refused: </p>
+
+    <p id ='new-admit'></p>
+    <p id ='new-refused'></p>
+
+    <script>
+        
+
+
+
+        const people = ['Chris', 'Anne', 'Colin', 'Terri', 
+                        'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];
+                        
+        const admitted = document.querySelector('#admitted');
+        const refused = document.querySelector('#refused');
+
+        // admitted.textContent = `Admitted:`;
+        // refused.textContent = `Refused:`; // another is to pass to new arrray
+
+        const newAdmitted = [];
+
+        for (i = 0; i < people.length; i++){
+            
+            if ((people[i] === 'Phil') || (people[i]==='Lola')) {
+
+                // refused.textContent += " " + people[i].concat(" ,");
+                refused.textContent += `${people[i]}, `;
+                
+            
+                
+
+                // document.getElementById('refused').innerHTML += people[i];
+                
+            } else {
+                admitted.textContent += " " + people[i].concat(",");
+              
+               
+            }
+        }
+
+        
+        refused.textContent = refused.textContent.slice(0, -2) // shorter
+        admitted.textContent = admitted.textContent.slice(0, admitted.textContent.length -1)
+        //longer
+
+
+    </script>
+    
+</body>
+</html>

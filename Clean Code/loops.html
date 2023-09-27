@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+</head>
+<body>
+    <p id ="demo"></p>
+    <p id ="demo2"></p>
+    <p id ="demo3"></p>
+
+    <button id = "calculate">Calculate</button>
+    <button id = "clear">Clear</button>
+    <p id ="demo4"></p>
+    <p id ="demo5"></p>
+
+    <script>
+
+        const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
+
+        //The for...of loop
+        for (const cat of cats){
+            document.getElementById('demo').innerHTML += cat + '<br>';
+            if (cat === 'Tiger') {
+                console.log('Tiger');
+            }
+        }
+
+
+        //The map()
+        function toUpper(string) {
+            if (string === 'Serval') {
+                console.log(string);
+            }
+            return string.toUpperCase();
+        }
+        const upperCats = cats.map(toUpper);
+        document.getElementById('demo2').innerHTML= upperCats.join(' * ');
+
+
+
+        //The filter() use  to test each item
+        function lCat(cat) {
+            return cat.startsWith("L");
+        }
+        const filtered = cats.filter(lCat);
+
+        //verted to expression
+        const filtered1 = cats.filter((cat) => {cat.startsWith('L')} );
+        document.getElementById('demo3').innerHTML = filtered;
+
+
+
+        //The for loop
+        function calculate(){
+            result.innerHTML += `<ul>`
+        
+            for (i = 1; i < 10; i++) {
+                result.innerHTML += `<li> ${i} x ${i} = ${i * i} </li>`;
+            }
+
+            result.innerHTML += `</ul>`;
+            result.innerHTML += '\nFinished';
+ 
+        }
+
+        const result = document.querySelector('#demo4')
+        const start = document.querySelector('#calculate');
+        const clear = document.querySelector('#clear');
+
+        start.addEventListener('click', calculate);//start
+        clear.addEventListener('click', () => (result.innerHTML =""));
+
+        //sample 
+        const catsName = ["Pete", "Biggles", "Jasmine"];
+        let myFavoriteCats = "My cats are called ";
+
+        for (i = 0; i < catsName.length; i++){
+            
+            if (i === catsName.length -1) {
+                myFavoriteCats += ` and ${catsName[i]}`;
+            } else {
+                myFavoriteCats += catsName[i] + ' ';
+            }
+        
+
+            document.getElementById('demo5').innerHTML = myFavoriteCats;
+        }
+
+
+
+
+      //Loops with break
+
+
+
+
+    </script>
+</body>
+</html>
