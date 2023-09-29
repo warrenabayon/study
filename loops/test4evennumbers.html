@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style rel="stylesheet" href =""></style>
+</head>
+<body>
+    <div class="section"></div>
+
+    <script>
+        const section = document.querySelector('.section');
+        const para = document.createElement('p');
+        const inputNUmber = prompt('Enter a number', "type here");
+
+        console.log(typeof(+inputNUmber))
+
+        /* using for loop
+        for (i = 0; i <= +inputNUmber; i++) {
+            if (i % 2 === 0) {
+                para.textContent += i
+                console.log('Odd')
+            } else {
+                console.log('Prime');
+            }
+         }
+         */
+
+         //using do while loop
+         i = 0;
+         while(i <= +inputNUmber) {
+            if (i % 2 === 0) {
+                para.textContent += i
+                console.log('Odd')
+            } else {
+                console.log('Prime');
+            }
+
+            i++;
+         } 
+
+         section.appendChild(para);
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style rel="stylesheet" href=""></style>
+</head>
+<body>
+    
+    <div class="row"></div>
+    <script>
+        const rowDiv = document.querySelector('.row');
+        const para = document.createElement('p')
+        const inputNumber = prompt('Enter Number');
+
+
+        for (i = 2; i < inputNumber; i++) {
+            if(i % 2 === 0){
+                para.textContent = `ODD: ${i}`;
+            } else {
+                console.log(`Prime: ${i}`);
+            }
+        }
+
+        rowDiv.appendChild(para);
+    </script>
+</body>
+</html>
