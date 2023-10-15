@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise</title>
+</head>
+<body>
+    
+    <!-- <button class="btn-add" >Add</button> -->
+
+    <div id="container">
+        <button id="1">Click Me</button>
+        <button id="2">Click Me</button>
+        <button id="3">Click Me</button>
+    </div>
+
+
+
+    <script>
+        /*
+        const container = document.querySelector('.container');
+        const btnAdd = document.querySelector('.btn-add');
+
+        const greet = document.createElement('p');
+        greet.textContent = "Hey I'm red!";
+        const blueTxt = document.createElement('h3')
+        blueTxt.innerText = "I'm blue h3!";
+        const div = document.createElement('div');
+        div.classList.add('div-style')
+        const h1 = document.createElement('h1');
+        h1.textContent ="I'm a div";
+        const para = document.createElement('p');
+        para.textContent = "ME TOO";
+
+
+        btnAdd.addEventListener('onmousedown', addContent);
+
+        function addContent () {
+            container.appendChild(greet);
+            container.appendChild(blueTxt);
+            container.appendChild(div);
+
+            div.setAttribute('style', 'background-color: red; color:#fff;');
+            
+            div.appendChild(h1);
+            div.appendChild(para);
+
+        }
+
+        */
+
+        /*
+        const btn = document.querySelector('#btn')
+        btn.onclick = () => alert('Hellow World');
+
+
+        const btn3 = document.querySelector('#btn2'); //  this method is much more powerfull
+        btn2.addEventListener('click', () => {
+            alert('hellow world');
+        });
+
+
+        const btn4 = document.querySelector('#btn3');
+        btn4.addEventListener('click', function (e) {
+            console.log(e.target);
+            e.target.style.background = 'blue';
+        });
+
+
+        
+        const btn5 = document.querySelector('#btn4');
+        btn5.addEventListener('click',capitalizingString);
+
+        
+        function capitalizingString () {
+            const string = "how much to learn"
+           console.log(string.charAt(0).toUpperCase() + string.slice(1));
+        }
+
+
+        const btnReverse = document.querySelector('#reverse');
+        btnReverse.addEventListener('click', reverseString);
+
+        function reverseString() {
+            const Text = 'Warren Abayon';
+            const reversed = Text.split("").reverse().join("");
+            console.log(reversed);
+        }
+        */
+
+    // buttons is a node list. It looks and acts much like an array.
+    const buttons = document.querySelectorAll('button');
+
+    // we use the .forEach method to iterate through each button
+    buttons.forEach((button) => {
+
+    // and for each one we add a 'click' listener
+    button.addEventListener('mouseover', () => {
+        alert(button.id);
+    });
+    });
+
+            
+
+
+    </script>
+
+</body>
+</html>

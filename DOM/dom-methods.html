@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM METHODS</title>
+</head>
+<body>
+    <h1>
+        THE TITLE OF YOUR WEBPAGE
+      </h1>
+      <div id="container"></div>
+      <button>add para</button>
+
+    <script>
+
+
+     
+    const container = document.querySelector('#container');
+    const content = document.createElement('div');
+    content.setAttribute('class', 'row home about active');
+    content.innerText = "lorem ipsum dolor sit amit";
+
+    const btn = document.querySelector('button');
+    btn.addEventListener('click', addPara);
+
+    function addPara (){
+        container.appendChild(content);
+
+    }
+
+
+    
+
+    </script>
+</body>
+</html>
