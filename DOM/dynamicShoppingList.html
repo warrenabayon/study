@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping list example</title>
+    <style>
+      li {
+        margin-bottom: 10px;
+      }
+
+      li button {
+        font-size: 8px;
+        margin-left: 20px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1>My shopping list</h1>
+
+    <div>
+      <label for="item">Enter a new item:</label>
+      <input type="text" name="item" id="item">
+      <button>Add item</button>
+    </div>
+
+    <ul>
+
+    </ul>
+
+    <script>
+
+
+        const myArray = []
+        const myShoppingList = document.querySelector('ul');
+        const listItem = document.querySelector('#item');
+        const addItemBtn = document.querySelector('button');
+        
+        loadMyList();
+
+        addItemBtn.addEventListener('click', addItem);
+
+        function addItem() {
+
+            myShoppingList.innerHTML = '';
+            myArray.push(listItem.value);
+            loadMyList();
+
+            console.log(myArray);
+        }
+
+        function loadMyList() {
+            
+            for (i = 0 ; i < myArray.length; i++){
+
+          
+            
+            const liTag = document.createElement('li');
+            const spanTag = document.createElement('span');
+            const deleteBtn = document.createElement('button');
+
+            spanTag.textContent = myArray[i];
+            deleteBtn.textContent = 'Delete ' + i;
+            deleteBtn.setAttribute('id', 'delete-item')
+
+            myShoppingList.appendChild(liTag);
+            liTag.appendChild(spanTag);
+            liTag.appendChild(deleteBtn);
+            listItem.value ='';
+            listItem.focus();
+
+            deleteBtn.addEventListener('click', () => {
+
+            myArray.splice(i, 1);
+            console.log(myArray);
+            });
+
+            }
+
+            
+           
+            
+        }
+
+        
+
+        const deleteItem = document.querySelector('#delete-item');
+        
+
+        
+
+        
+
+       
+
+        
+        
+
+       
+        
+
+
+     /*   
+        const myShoppingList = document.querySelector('ul');
+        const listItem = document.querySelector('#item');
+        const addItemBtn = document.querySelector('button');
+        
+
+        function addItem () {
+            
+            const liTag = document.createElement('li');
+            const spanTag = document.createElement('span');
+            const deleteBtn = document.createElement('button');
+
+            spanTag.textContent = listItem.value
+            deleteBtn.textContent = 'Delete'
+            deleteBtn.setAttribute('class', 'delete-item');
+
+
+            myShoppingList.appendChild(liTag);
+            liTag.appendChild(spanTag)
+            liTag.appendChild(deleteBtn);
+            listItem.value ='';
+            listItem.focus();
+            deleteBtn.addEventListener('click', deleteItem);
+
+            function deleteItem (){
+                myShoppingList.removeChild(liTag);
+            // console.log('delete');
+
+            }
+        }
+
+        
+
+        addItemBtn.addEventListener('click', addItem);
+        */
+        
+
+
+    </script>
+  </body>
+</html>
