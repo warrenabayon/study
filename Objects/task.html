@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task</title>
+  
+  <link rel="stylesheet" href="">
+</head>
+
+<body>
+
+  <script>
+
+/* 
+Hello, object
+importance: 5
+Write the code, one line for each action:
+
+Create an empty object user.
+Add the property name with the value John.
+Add the property surname with the value Smith.
+Change the value of the name to Pete.
+Remove the property name from the object.
+*/
+/*
+    // task 1
+    let user = {};
+    user.name = 'John';
+    user.username = 'Smith';
+
+    console.log(user.name);
+    user.name ='Pete';
+    console.log(user.name);
+    delete user.name;
+    // end  task 1
+*/
+
+/*
+// task 2
+    let schedule = {};
+    const isEmpty = () => {
+      //return Object.keys(schedule).length === 0; //check for legnth
+
+      for (let prop in schedule) {  
+          return false; // if the loop started it will return false     
+      }
+      return true;
+    }
+
+    console.log(isEmpty(schedule));
+
+    schedule['8:30'] = 'get up';
+    console.log(isEmpty(schedule));
+
+    // end task 2
+*/
+/*
+    //task 3
+
+    let salaries = {
+      John: 100,
+      Ann: 160,
+      Pete: 130,
+    }
+
+    let sum = 0;
+      for (let prop in salaries){
+        // console.log(salaries[prop]);
+        sum += salaries[prop];
+       
+      }   
+    console.log(sum);
+    // end  task 3
+*/
+
+      //task 4
+      // before the call
+      let menu = {
+        width: 200,
+        height: 300,
+        title: "My menu"
+      };
+
+
+      const multiplyNumeric = (menu)=> {
+        for (let prop in menu) {
+         if (typeof(menu[prop]) === 'number') {
+          menu[prop] *=  2; // multiply by 2 the current value
+         }
+         console.log (`${prop} : ${menu[prop]}`);
+        
+        }
+
+      }
+     multiplyNumeric(menu);
+
+
+
+      // end task 4
+
+  </script>
+</body>
+</html>

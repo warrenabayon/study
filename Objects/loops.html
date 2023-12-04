@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loops</title>
+  <link rel="stylesheet" href="">
+</head>
+<body>
+
+
+  <script>
+
+    /*
+    for (key in object) {
+      // executes the body for each key among object properties
+    }
+    */
+
+    /*
+
+    //lets output all properties of user:
+
+    const user = {
+      name: 'Warren',
+      age: 31,
+      isAdmin: true,
+    }
+
+    //use loop to output the properties in objects
+
+    for (let key in user) { // we can use prop instead of key
+      console.log(`${key} : ${user[key]}`); // name, age, isAdmin
+      
+    }
+    */
+
+
+    //Ordered like an object
+
+    /*
+    let codes = {
+      "49": "Germany",
+      "41": "Switzerland",
+      "44": "Great Britain",
+      // ..,
+      "1": "USA"
+    };
+    for (let code in codes){
+      console.log(code); // 1, 41, 44, 49
+    }
+    */
+
+    const user = {
+      name: 'Warren',
+      surname: 'Abayon'
+    }
+    //add
+    user.age = 31
+    //loop
+    for (let prop in user) {
+      console.log(prop); // name,surname,age // arrage in its creation
+    }
+
+    //adding + will cheat it to short to what we want
+    let codes = {
+      "+49": "Germany",
+      "+41": "Switzerland",
+      "+44": "Great Britain",
+      // ..,
+      "+1": "USA"
+    };
+
+    for (let code in codes){
+      console.log(+code); // adding +
+    }
+    
+
+
+
+  </script>
+  
+</body>
+</html>

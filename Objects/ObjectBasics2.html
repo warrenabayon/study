@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Object basics: Task 2</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="" />
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+  </body>
+  <script>
+    let bandInfo;
+
+    // Add your code here
+    const favBand = {
+      name: 'Queen',
+      nationality: 'British',
+      genre: 'Rock',
+      members: 4,
+      formed: 1970,
+      split: 1992,
+      albums:[
+        { 
+          name: 'Bohemian Rapsody',
+          released: 1980,
+        },
+        {
+          name: 'Lady Gudaiva',
+          released: 1990,
+        }
+
+      ],
+    }
+    bandInfo = `Summary: ${favBand['name']}, ${favBand.nationality}, ${favBand['formed']}, ${favBand.genre}, ${favBand.albums[0]['name']}`;
+
+    console.log(favBand.albums[0]['name']);
+
+
+    // Don't edit the code below here!
+
+    const section = document.querySelector('section');
+    let para1 = document.createElement('p');
+    para1.textContent = bandInfo;
+    section.appendChild(para1);
+  </script>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="">
+</head>
+<body>
+
+
+  <script>
+    /*
+
+    const user = {};
+    user.name = 'Warren';
+    user['surname'] = 'Abayon';
+    user['name'] = 'Roan';
+    delete user.name;
+    // console.log(user);
+  
+
+
+
+  const isEmpty = (user)=> {
+    
+    for (let key in user) {
+      console.log(user[key])
+      return false;
+    }
+    return true;
+    
+  }
+
+  console.log(isEmpty(user)); // false.. meron laman ang user
+  */
+
+
+  /*
+
+   let salaries = {
+     John: 100,
+     Ann: 160,
+     Pete: 130,
+   }
+   
+   let sum = 0;
+   const getTotalSalary = ()=> {
+
+    for (let key in salaries) {
+       sum += salaries[key];    
+    }
+
+    console.log(sum);
+   }
+
+   console.log(getTotalSalary());
+
+  */
+
+  // before the call
+  /*
+let menu = {
+  width: 200,
+  height: 300,
+  title: "My menu"
+};
+
+const multiplyNumeric = (menu)=> {
+
+  for (let key in menu) {
+    if (typeof(menu[key])==='number') {
+      menu[key] *= 2;
+    }
+  }
+
+  console.table(menu);  
+
+}
+
+
+ multiplyNumeric(menu);
+ */
+
+ function Person(name='warren', age= 32) {
+    this.name = name;
+    this.age = age;
+    this.greetings = ()=> {
+      console.log(`I'm ${this.name} and I'm ${this.age} years old`);
+    }
+ }
+
+ const warren = new Person();
+ 
+  warren.greetings();
+
+  </script>
+ 
+</body>
+</html>
