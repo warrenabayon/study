@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="">
+</head>
+<body>
+
+
+  <script>
+
+//task 1
+const camelize = (txtString) => { 
+  const removeEmpty = txtString.split('-').filter((item) => {
+     if (item != '') {return item};
+  });
+
+  const toUpper = removeEmpty.map((item) => {
+    return  item[0].toUpperCase() + item.slice(1, item.length);
+    
+  });
+
+  const convert = toUpper.join('')
+  console.log(convert[0].toLowerCase()+ convert.slice(1, convert.length));
+ 
+}
+
+camelize("background-color") //== 'backgroundColor';
+camelize("list-style-image") //== 'listStyleImage';
+camelize("-webkit-transition") //== 'WebkitTransition';
+
+
+    
+  </script>
+  
+</body>
+</html>
