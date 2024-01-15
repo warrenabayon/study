@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Methods</title>
+  <link rel="stylesheet" href="">
+</head>
+<body>
+  
+  <script>
+
+
+
+    //REDUCE
+    const theArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
+    //get the sum 
+    const getTotal = theArray.reduce((ac, cv) => ac + cv, 0);
+    console.log(getTotal);
+
+    //show index each item in object
+    const mappedValue = theArray.reduce((ac, cv, index, arr) => {
+      return {
+        ...ac,
+        [index]: cv,
+      }
+    }, {});
+    console.log(mappedValue);
+
+    //CONTACT
+    const array1 = ['Dont\'t','forget'];
+    // join
+    const array2 = ['to', 'subscribe'];
+    const combine = array1.concat(array2);
+    console.log(combine.toString());
+
+    //FILL
+    const peopleWaiting = ['Jerry', 'Susan', 'Call', 'Juan'];
+     //get name with 'n'
+    const nameWithR = peopleWaiting.filter((item, index, arr) => item.includes('n'));
+    console.log(nameWithR);
+
+    //replace susan and call with x
+    peopleWaiting.fill('x', 1 , 3);
+    console.log(peopleWaiting);
+
+    //FLAT
+    //moves the nested array to one level
+    const nested = [1, 2, 3, ['a', 'b', 'c', [-1, -2, -3]]];
+    console.log(nested.flat(2));//return a new array // provides a custom level
+    console.log(nested);
+
+    ///FLAT MAP
+    const theArray2 = [[undefined], [1, 2], [5, 3], [undefined]];
+    const checkerFn = item => item[0] && item[1] ? item[0] + item[1] : item;
+    const sums = theArray2.flatMap(checkerFn);
+    console.log(sums);
+    
+    //SPLICE 
+    const numbers = [1, 2, 3, 4, 5];
+    numbers.splice(2, 2, 'a', 'b', 'c');// the first arg is the start and the secnd is the number of item to be replaced or removed . the 3rd ar ethe items to be used
+    console.log(numbers);
+
+    //IRITATORS
+    //KEYS
+    const myArray = ['a', 'b', 'c', 'd'];
+    //loop
+    console.log(Object.keys(myArray));//converts to strings // ignores hole or array
+    for (const item of myArray.keys()){// still r emains a numbers
+      console.log(item);
+    }
+    //VALUE
+    console.log(Object.values(myArray));//similar to keys ,, but value
+    for (const item of myArray.values()) {
+      console.log(item);
+    }
+
+    //ENTRY
+    const iter = myArray.entries(); //gives the index and the value
+    //console.log(iter);
+    for (let item of myArray.entries()) {
+      console.log(item);
+    }
+
+    //SORT // mutative
+    const arrNames = ['Shelby', 'Zack', 'Cathy', 'Jose'];
+    const arrAges = [32, 29, 33, 24]; 
+    const people = [
+      {
+        name: 'Shelby',
+        age: 32,
+      },
+      {
+        name: 'Zack',
+        age: 29,
+      },
+      {
+        name: 'Cathy',
+        age: 33,
+      },
+      {
+        name: 'Jose',
+        age: 24,
+      }
+    ]
+    //sort by age or name
+
+    //people.sort((a, b) => a.age - b.age);
+    people.sort((a, b) => a.name.localeCompare(b.name));
+    console.log(people);
+
+   //COPY WITHIN
+   arrNames.copyWithin(1, 2);// so the first args is where the placed to and second is the copying starts
+   console.log(arrNames)
+
+
+  </script>
+</body>
+</html>
