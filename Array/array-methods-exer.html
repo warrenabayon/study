@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Methods Exercises</title>
+  <link rel="stylesheet" href="">
+</head>
+<body>
+  <section>
+
+  </section>
+
+  <script>
+    function printOutput (result) {
+      const section = document.querySelector('section');
+      const para = document.createElement('p');
+      para.textContent = `Result: ${result}`;
+      section.appendChild(para);
+    }
+
+   //Arrays 1
+  //  const myArray = ['Warren', 'Roan', 'Hailey'];
+  //  myArray[0] = 'Lucifer';
+  //  myArray[1] = 'Faye';
+  //  myArray.unshift('Family');
+  //  myArray.splice(0, 0 , 'add');
+  //  printOutput(myArray);
+    
+  //Arrays 2
+  // const myString = 'Ryu+Ken+Chun-Li+Cammy+Guile+Sakura+Sagat+Juri';
+  // const myArray = myString.split('+');
+  // const arrayLenth = myArray.length;
+  // const lastItem = myArray[arrayLenth - 1];
+
+  // console.log(myArray.pop());
+
+  //Arrays 3
+  // const myArray = [ "Ryu", "Ken", "Chun-Li", "Cammy", "Guile", "Sakura", "Sagat", "Juri" ];
+  // myArray.pop();
+  // myArray.splice(myArray.length , 0,  'first item', 'second item');
+
+  // // myArray.forEach((item, index, arr) => {
+  // //   console.log(`${item} (${index})`);
+  // // });
+  
+  // for (const item in myArray) {
+  //   console.log(`${myArray[item]} (${item})`);
+  // }
+
+ //Array 4
+
+  // const birds = [ "Parrots", "Falcons", "Eagles", "Emus", "Caracaras", "Egrets" ];
+  // const toRemove = birds.indexOf('Eagles');
+  // birds.splice(toRemove, 1);//remove the 'Eagles'
+  // const eBirds = birds.filter((item, index, arr)=> item.startsWith('E'));// get the name start with 'E'
+  // console.log(birds);
+  // console.log(eBirds);
+
+  </script>
+  
+</body>
+</html>
