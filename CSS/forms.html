@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    :root {
+      display: flex;
+      flex-direction: row;
+    }
+    .form {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      label {
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- We use GET when we want to retrieve something from a server. For example, Google uses a GET request when you search as it gets the search results. -->
+
+  <!-- <form action="example.com/path" method="post">
+    <label for="first_name">First Name:</label>
+    <input type="text" id="first_name" placeholder="Bob..." name="first_name">
+  </form> -->
+
+
+  <div class="form">
+    <fieldset>
+      <legend>Name Details</legend>
+      <label for="username">What's your name?</label>
+      <input type="text" name="name" id="username" placeholder="jack...">
+      <label for="email">Enter Email</label>
+    <input type="email" name="email" id="email" placeholder="bob@gmail.com..">
+  </fieldset>
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" placeholder="******">
+    <input type="date" id="date" name="date">
+    <textarea name="comments" id="comments" cols="30" rows="10" placeholder="type comments..."></textarea>
+    <select name="select" id="select">
+      <optgroup label="cloting00">
+        <option value="item1">option 1</option>
+        <option value="item2">option 2</option>
+        <option value="item3">option 3</option>
+        <option value="item4" selected>option 4</option>
+        <option value="item5">option 5</option>
+      </optgroup>
+      <optgroup label="foot wear">
+        <option value="item6">option 6</option>
+        <option value="item7">option 7</option>
+        <option value="item8">option 8</option>
+        <option value="item9">option 9</option>
+        <option value="item10">option 10</option>
+            </select>
+      </optgroup>
+
+      <fieldset>
+        <legend>
+          Status</legend><div class="radio">
+            <div>
+              <input type="radio" id="child" name="ticket_type" value="child">
+              <label for="child">Child</label>
+            </div>
+          
+            <div>
+              <input type="radio" id="adult" checked name="ticket_type" value="adult">
+              <label for="adult">Adult</label>
+            </div>
+          
+            <div>
+              <input type="radio" id="senior"  name="ticket_type" value="senior">
+              <label for="senior">Senior</label>
+            </div>
+          </div>
+       
+      </fieldset>
+
+      <fieldset>
+        <legend>SKills</legend>
+        <div class="checkbox">
+          <div><input type="checkbox" value="check 1" id="check1" name="check1">
+          <label for="check1">Check 1</label>
+          </div>
+          <div><input type="checkbox" value="check 2" id="check2" name="check2" checked>
+            <label for="check1">Check 2</label>
+          </div>
+          <div><input type="checkbox" value="check 3" id="check3" name="check3">
+            <label for="check1">Check 3</label>
+          </div>
+        </div>
+      </fieldset>
+
+    <button class="greet-btn" type="button">Greet Me</button>
+  </div>
+  
+  <h1 class="greeting"></h1>
+
+
+  <script>
+const name = document.querySelector("#username")
+const mail = document.querySelector('#email');
+const password = document.querySelector('#password');
+const greetMeButton = document.querySelector(".greet-btn")
+const greetingOutput = document.querySelector(".greeting")
+
+greetMeButton.addEventListener('click', () => {
+   greetingOutput.innerText = `Hello ${name.value} + ${mail.value} + ${password.value}`;
+})
+
+  </script>
+  
+</body>
+</html>
