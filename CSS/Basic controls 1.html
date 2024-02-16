@@ -87,10 +87,15 @@
 <script>
   const price = document.querySelector('#price')
   const output = document.querySelector('output');
-  output.textContent = `${price.value}  ${price.step};`
+  const getPercentage =Math.floor((price.value/price.max) * 100);
+  output.textContent = `${price.value}  ${getPercentage};`
+  
 
   price.addEventListener('input', () => {
-    output.textContent = `${price.value}  ${price.step};`
+    
+    const getPercentage =Math.floor((price.value/price.max) * 100);
+    output.textContent = `${price.value}  ${getPercentage};`
+    
   })
 
 
