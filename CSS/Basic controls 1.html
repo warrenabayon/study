@@ -64,10 +64,36 @@
       <li>
         <label for="gallery_img">Choose gallery images to upload</label>
         <input type="file" accept="image/png, accept/jpg" id="gallery_img" name="upload_gallery"></input></li>
+      <li><input type="search" id="search" name="search"></li>
+      <li><input type="tel" id="tel" name="tel"></li>
+      <li>
+        <label for="price">Choose a maximum house price: </label>
+        <input
+          type="range"
+          name="price"
+          id="price"
+          min="50000"
+          max="500000"
+          step="100"
+          value="250000" />
+        <output class="price-output" for="price"></output>
+      </li>
     </ul>
   </fieldset>
 </form>
 
 
 </body>
+<script>
+  const price = document.querySelector('#price')
+  const output = document.querySelector('output');
+  output.textContent = `${price.value}  ${price.step};`
+
+  price.addEventListener('input', () => {
+    output.textContent = `${price.value}  ${price.step};`
+  })
+
+
+
+</script>
 </html>
