@@ -58,7 +58,7 @@
     </fieldset>
     <button type="submit">Submit</button>
   </form> -->
-<form action="ur" method="post">
+<!-- <form action="ur" method="post">
   <fieldset>
     <ul>
       <li>
@@ -78,9 +78,57 @@
           value="250000" />
         <output class="price-output" for="price"></output>
       </li>
+      <li><input type="datetime-local"></li>
+      <li><input type="search" id="search" name="search" placeholder="search here..."></li>
+      <li><input type="tel" id="tel" name="tel"></li>
+      <li><input type="url" id="url" name="url"></li>
+      <li><input type="color" id="color" name="color"></li>
+      <li><input type="datetime-local" name="datetime" id="datetime"></li>
+      <li><input type="month" id="month" name="name"></li>
+      <li><input type="week" id="week" name="week"></li>
+      <li><input type="time" id="time" name="time"></li>
+      <li><textarea name="message" id="message" cols="30" rows="5" disabled>textaread</textarea></li>
     </ul>
   </fieldset>
+</form> -->
+<!-- 
+Other forms -->
+
+<!-- <select id="multi" name="multi" multiple size="2">
+  <optgroup label="fruits">
+    <option>Banana</option>
+    <option selected>Cherry</option>
+    <option>Lemon</option>
+  </optgroup>
+  <optgroup label="vegetables">
+    <option>Carrot</option>
+    <option>Eggplant</option>
+    <option>Potato</option>
+  </optgroup>
+</select> -->
+<!-- 
+DATALIST AUTOCOMPLETE -->
+
+<!-- <label for="myFruit">What's your favorite fruit?</label>
+<input type="text" name="myFruit" id="myFruit" list="mySuggestion" />
+<datalist id="mySuggestion">
+  <option>Apple</option>
+  <option>Banana</option>
+  <option>Blackberry</option>
+  <option>Blueberry</option>
+  <option>Lemon</option>
+  <option>Lychee</option>
+  <option>Peach</option>
+  <option>Pear</option>
+</datalist> -->
+
+
+<form oninput="result.value=parseInt(a.value)*parseInt(b.value)">
+  <input type="range" id="b" name="b" value="50" /> +
+  <input type="number" id="a" name="a" value="10" /> =
+  <output name="result" for="a b">60</output>
 </form>
+
 
 
 </body>
