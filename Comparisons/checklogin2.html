@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+
+    const admin = prompt("Enter Your Name", "Warren");
+
+
+    if (admin === 'Admin') {
+      const pass = prompt('Enter Password', "****");
+      if (pass === "pass") {
+        alert("Welcome!");
+      } else if (pass === null || pass !== 'pass' ) {
+        alert('Canceled');
+      }
+    }
+    else if (admin === "" || admin == null) {
+      alert("Canceled")
+    } 
+    else {
+      alert("I dont know you");
+    }
+    
+    
+    
+
+  </script>
+</body>
+</html>
