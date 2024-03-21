@@ -7,5 +7,48 @@
 </head>
 <body>
   
+
+  <label for="bg">Select Theme:</label>
+  <select name="bg" id="bg"></select>
+  <h1>THis is my website</h1>
+
+  <script>
+    const themeColor =["white", "black", "purple", "yellow", "psychedelic"] ;
+    const select = document.querySelector('#bg');
+    const html = document.querySelector('html')
+
+
+    loadTheme();
+
+    //load the color
+    function loadTheme() {
+      select.innerHTML = "";
+      themeColor.forEach((item, index) => {
+        const opt = document.createElement('option');
+        opt.innerHTML = item[0].toUpperCase() + item.slice(1);
+        select.appendChild(opt);
+      });
+    }
+
+    //update color
+    function updateClr(bgClr, txtClr) {
+      html.setAttribute('style', `background:${bgClr}; color:${txtClr};`);
+      // html.setAttribute('style', `color:${txtClr}`);
+    }
+
+    select.addEventListener('change',()=> {
+      switch(select.value) {
+        case 'White': 
+        updateClr(select.value, 'black');
+        break;
+        case 'Black': 
+        updateClr(select.value, 'white')
+        break;
+        default:
+        updateClr(white, black);
+      }
+    })
+
+  </script>
 </body>
 </html>
