@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <p>test select if</p>
+
+  <select name="name" id="name">
+    <option >name1</option>
+    <option >name2</option>
+    <option >name3</option>
+    <option >name4</option>
+    <option >name5</option>
+  </select>
+  <p class="res">test result</p>
+
+  <script>
+
+    const sel = document.querySelector('#name');
+    const res = document.querySelector('.res');
+
+   
+
+
+  
+
+    sel.addEventListener('change', testRun);
+
+    function testRun () {
+      console.log(sel.value);
+      console.log(sel.selectedIndex);
+    }
+
+
+  </script>
+</body>
+</html>

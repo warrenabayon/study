@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    ul {
+    list-style: none;
+    display: grid; 
+    gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 0;
+  }
+
+  ul li {
+    background: #ddd;
+    border: 1x solid black;
+    padding: 10px;
+  }
+  </style>
+</head>
+<body>
+
+  <label for="">Select Month</label>
+  <select name="months" id="months">
+
+  </select>
+  <h1>Month Selected</h1>
+
+  <ul>
+
+  </ul>
+
+  <script>
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const selMonths = document.querySelector('#months');
+    const txtSelectedMonth = document.querySelector('h1');
+    const listDays = document.querySelector('ul');
+    const txtMonth = document.querySelector('h1');
+    
+    loadMonths(); 
+    displayDays();
+
+
+    //load months
+  
+    function loadMonths() {
+      selMonths.innerHTML="";
+      months.forEach((item, index) => {
+        const option = document.createElement('option');
+        option.textContent = item;
+        selMonths.appendChild(option);
+      } 
+      );
+    }
+
+    //load days of the selected month
+    function getMonthDays() {
+      const daysInMonth = (year, month) => new Date(year, month, 0).getDate();
+      return daysInMonth(new Date().getFullYear(), (selMonths.selectedIndex + 1));
+    }
+    
+    function displayDays() {
+      listDays.innerHTML ="";
+      for (i = 1; i <= getMonthDays(); i++) {
+        const list = document.createElement('li');
+        list.innerHTML = i;
+        listDays.appendChild(list);
+      }
+    }
+    
+    //action when selec change
+    selMonths.addEventListener('change', ()=> {
+      txtMonth.innerHTML = selMonths.value + '(' + (selMonths.selectedIndex + 1) + ")";
+      displayDays();
+    })
+    
+    
+
+
+
+    // const date = new Date();
+    
+    // const daysInMonth = (year, month) => new Date(year, month, 0).getDate();
+
+  //   selMonths.addEventListener('change', ()=> {
+  //     txtSelectedMonth.innerHTML = selMonths.value + ' ' + selMonths.length +  " " + ((Number(selMonths.selectedIndex)) + 1)   ;
+
+  //     createCal(30);
+  //   });
+
+  //   function createCal (day) {
+  //     list.innerHTML = '';
+  
+
+  //     for (i = 0; i <= day; i++) {
+  //       const d = document.createElement('li')
+  //       d.innerHTML= i;
+  //       list.appendChild(d);
+  //     }
+  //   }
+
+  // console.log(date.getFullYear())
+
+  </script>
+  
+</body>
+</html>
