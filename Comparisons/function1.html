@@ -79,26 +79,71 @@
 // console.log(min(3, -1))
 // console.log(min(1, 1))
 
-const a = prompt('enter x', 'type here');
-const b = prompt('enter y', 'type here');
-let res = Number(a);
+// const a = prompt('enter x', 'type here');
+// const b = prompt('enter y', 'type here');
+// let res = Number(a);
 
-function pow(x , n) {
+// function pow(x , n) {
 
-  for (i = 1; i < n; i++) {
-    res *= x;
-    console.log(res);
+//   for (i = 1; i < n; i++) {
+//     res *= x;
+//     console.log(res);
    
-  }
+//   }
 
-  console.log(res);
-}
+//   console.log(res);
+// }
 
-pow(Number(a), Number(b));
+// pow(Number(a), Number(b));
+
+
+// function sayHi() {   // (1) create
+//   alert( "Hello" );
+// }
+
+// let func = sayHi;    // (2) copy
+
+// func(); // Hello     // (3) run the copy (it works)!
+// sayHi(); // Hello    //     this still works too (why wouldn't it)
 
 
 
+// function add7(n) {
+//   return n + 7;
+// }
+
+// alert(add7(10));
+
+// function multi(a, b) {
+//   return a * b ;
+// }
+// alert(multi(10, 10));
+
+// function capitalized(text) {
+//   return text[0].toUpperCase() + text.slice(1).toLowerCase();
+// }
+
+// alert(capitalized('WARREN'));
+
+const myArr = ['A1B2',
+'C3D4',
+'E5F6',
+'G7H8',
+'I9J0',
+'K1L2',
+'M3N4',
+'O5P6',];
+
+
+const newArr = (arr) => arr.forEach(element => {
+  console.log(element);
+});
+
+console.log(newArr(myArr));
   </script>
   
 </body>
 </html>
+
+
+
