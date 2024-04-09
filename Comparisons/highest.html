@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+
+  <script>
+
+    // const numbers = [100,200,300,4,5,6,7,8,9,10];
+
+    // function getHighest(arr) {
+    //   console.log(arr)
+    //   const sorted = arr.sort((a , b) => a - b) 
+    //   console.log(sorted[sorted.length -3]);
+    // }
+
+
+    // getHighest( numbers);
+
+
+    const items = [
+  { name: "Edward", value: 21 },
+  { name: "Sharpe", value: 37 },
+  { name: "And", value: 45 },
+  { name: "The", value: -12 },
+  { name: "Magnetic", value: 13 },
+  { name: "Zeros", value: 37 },
+];
+
+
+const sortVal = items.sort((a, b) => a.value - b.value);
+
+const sortName = items.sort((a, b) => a.name.localeCompare(b.name));
+
+console.table(sortVal);
+console.table(sortName);
+  </script>
+  
+</body>
+</html>
+
+
