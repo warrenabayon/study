@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="">
+</head>
+<body>
+  
+
+
+  <script>
+
+const items = [
+  {name: 'Bike', price: 100},
+  {name: 'TV', price: 200},
+  {name: 'Album', price: 10},
+  {name: 'Book', price: 100},
+  {name: 'Phone', price: 5},
+  {name: 'Computer', price: 500},
+  {name: 'Keyboard', price: 1000}
+]
+
+
+// filter
+// const inExpensiveItems = items.filter((val,index,arr) => val.price <= 100)
+// .sort((a,b) => a.price - b.price);
+// console.table(inExpensiveItems);
+
+// const inExpensiveItems2 = items.filter(filtered);
+// function filtered(val, index, arr) {
+//   return val.price <= 100;
+// }
+
+// console.table(inExpensiveItems2.sort((a , b) => a.price - b.price));
+
+
+
+// map // get element of an array and convert it to new array
+// const itemNames = items.map((val, index, arr) => val.name);
+// console.table(itemNames.sort());
+
+// const itemNames2 = items.map(nameArr);
+// function nameArr(val,index,arr) {
+//   return val.name;
+// }
+
+// console.table(itemNames2.sort());
+
+
+// find // find item in array
+// const findItem = items.find((val,index, arr) => val.name = 'Phone');
+// console.log(findItem);
+
+
+// forEach
+// items.forEach((val,index,arr) => {
+//   console.log(val.price);
+// })
+
+// some
+// const hasAverage = items.some((val,index,arr) => {
+//   return val.price > 900; //returns true if kahit isa ay pumasa sa  test
+// });
+// console.log(hasAverage);
+
+
+// every // will return false if kahit isa ay hindi pumasa,, dapat lahat
+
+// const hasPassed = items.every((val,index, arr)=> {
+//   return val.price <= 2000;
+// });
+
+// console.log(hasPassed);
+
+// reduce // gets the total of the array
+// const sumALl = items.reduce((total,val,index,arr) => {
+//   return total + val.price;
+// }, 0);
+
+// console.log(sumALl);
+
+
+// // includes
+// const haveItems = items.includes(items, 0); 
+
+// console.log(haveItems);
+
+
+// function toUpper(string, index,arr) {
+//   return string.toUpperCase();
+// }
+
+// const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
+
+// const upperCats = cats.map(toUpper);
+
+// console.log(upperCats);
+  </script>
+</body>
+</html>
