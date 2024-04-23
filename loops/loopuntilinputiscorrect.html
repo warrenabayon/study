@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+
+<script>
+
+  //WHile
+  //   while(true) { //infinite loop
+  //   const inputNumber = +prompt('Enter Number','0');
+  //   if(!inputNumber || inputNumber > 100) break; // stop if canceled or number > 1000
+  // } console.log('cancelled or input > 100')
+
+
+  //DO WHILE version
+  let inputNumber;
+  do {
+    inputNumber = +prompt('Enter Number','0');
+  } while (inputNumber < 100 && inputNumber);
+
+  console.log('cancelled or input > 100')
+  
+</script>
+</body>
+</html>
