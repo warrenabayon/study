@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+
+  <script>
+
+    // const myNum = prompt('enter a number','number');
+
+    // if (!myNum) console.log('break here')
+    // else {
+    //   console.log(myNum);
+    // }
+
+let sum = 0;
+
+while (true) {
+
+  let value = +prompt("Enter a number", '');
+
+  if (!value || value > 100) break; // (*)
+
+  sum += value;
+
+}
+alert( 'Sum: ' + sum + ' loops break' );
+
+  </script>
+  
+</body>
+</html>

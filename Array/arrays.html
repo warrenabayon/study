@@ -25,20 +25,20 @@
 
   // Fibonachi
 
-  // function fib(num) {
-  //   if (num === 0) return 0;
-  //   let p1 = 0;
-  //   let p2 = 1;
-  //   let current;
-  //   for(i = 3; i<num; i++){
-  //     current = p1 + p2;
-  //     p1 = p2;
-  //     p2 = current;
-  //   }
-  //   return p2;
-  // }
+  function fib(num) {
+    if (num === 0) return 0;
+    let p1 = 0;
+    let p2 = 1;
+    let current;
+    for(i = 3; i<num; i++){
+      current = p1 + p2;
+      p1 = p2;
+      p2 = current;
+    }
+    return p2;
+  }
 
-  // console.log(fib(9));
+  console.log(fib(11));
 
 
 //   const cars = [
@@ -56,7 +56,7 @@
 //   return 0;
 // })
 
-console.table(cars);
+// console.table(cars);
 
   </script>
 </body>
