@@ -17,13 +17,29 @@
   // } console.log('cancelled or input > 100')
 
 
-  //DO WHILE version
-  let inputNumber;
-  do {
-    inputNumber = +prompt('Enter Number','0');
-  } while (inputNumber < 100 && inputNumber);
+  // //DO WHILE version
+  // let inputNumber;
+  // do {
+  //   inputNumber = +prompt('Enter Number','0');
+  // } while (inputNumber <= 100 && inputNumber);
 
-  console.log('cancelled or input > 100')
+  // console.log('cancelled or input > 100')
+
+  function fib(n) {
+    if(n===0) return 0;
+    let p1 = 0;
+    let p2 = 1;
+    let current;
+    for (i = 2; i <= n; i++) {
+      console.log(p1)
+      current = p1 + p2;
+      p1 = p2;
+      p2 = current;
+     
+    }
+    return p1;
+  }
+  console.log(fib(9));
   
 </script>
 </body>
