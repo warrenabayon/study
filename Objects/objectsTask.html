@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+    //// test 1
+    // const user  = {};
+    // user.name = 'John';
+    // user['surname' = 'Smith'];
+    // user.name = 'Pepe'
+    // delete user.name;
+
+
+    /////test 2 check for emptiness
+
+    function isEmpty(obj) {
+      const result = '';
+
+      for (key in obj) {
+        return false; //not empty
+      } 
+
+      return true; //if empty
+
+    }
+
+
+    const sched = {};
+    alert(isEmpty(sched));//false
+
+    sched.monday = 800;
+    alert(isEmpty(sched));//true
+
+
+  </script>
+</body>
+</html>

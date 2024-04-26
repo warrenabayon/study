@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+
+    const myObjects = {
+      name: 'Warren',
+      age: 31,
+      isMarried: true,
+    }
+
+    for(key in myObjects) {
+      console.log(myObjects[key]);// prints the value of each property
+
+      console.log(key)//prints the proerty name
+    }
+
+    //Ordered in Objects
+
+    let codes = {
+      "+49": "Germany",
+      "+41": "Switzerland",
+      "+44": "Great Britain",
+      // ..,
+      "+1": "USA"
+    };
+
+    for (let code in codes) {
+  alert(+code); // 1, 41, 44, 49
+    }
+
+
+  </script>
+  
+</body>
+</html>
+
