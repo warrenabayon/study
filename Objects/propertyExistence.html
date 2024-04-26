@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+
+
+//key in user // is used to check if property exist
+
+    let user = {
+      name:'Warren',
+      age: 31,
+    }
+
+    const key = 'color';
+    const res = key in user ? 'yes' : 'nope'
+    console.log(res);
+
+
+    //second method is using undefined
+
+    const res2 = user.kulay === undefined ? 'yes' : 'nope';
+    console.log(res2); // now dito dapat magreretur siya ng undefined kung wala siya sa objects
+  </script>
+</body>
+</html>
