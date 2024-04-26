@@ -19,24 +19,38 @@
 
     /////test 2 check for emptiness
 
-    function isEmpty(obj) {
-      const result = '';
+    // function isEmpty(obj) {
+    //   const result = '';
 
-      for (key in obj) {
-        return false; //not empty
-      } 
+    //   for (key in obj) {
+    //     return false; //not empty
+    //   } 
 
-      return true; //if empty
+    //   return true; //if empty
 
+    // }
+
+
+    // const sched = {};
+    // alert(isEmpty(sched));//false
+
+    // sched.monday = 800;
+    // alert(isEmpty(sched));//true
+
+
+    //test 3 Sun of Objects
+    let salaries = {
+      John: 100,
+      Ann: 160,
+      Pete: 130
     }
 
+    let sum = 0;
+    for (key in salaries) {
+      sum += salaries[key];
+    }
 
-    const sched = {};
-    alert(isEmpty(sched));//false
-
-    sched.monday = 800;
-    alert(isEmpty(sched));//true
-
+    console.log(sum);
 
   </script>
 </body>
