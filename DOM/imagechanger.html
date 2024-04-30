@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+
+  <style>
+    img {
+      max-width: 300px;
+      margin: 0 auto;
+      display: block;
+      
+    }
+  </style>
+</head>
+<body>
+  
+  <img src="../DOM/img/chrome.webp">
+
+  <script>
+
+    const swapImg = document.querySelector('img');
+    swapImg.addEventListener('click', ()=> {
+      
+      // console.log(swapImg.src);
+
+      // if (swapImg.src.includes('chrome.webp')) {
+      //   console.log('fire');
+      //   swapImg.style.animation = '1s all ease';
+      //   swapImg.src = '../DOM/img/firefox.webp';
+        
+      //   console.log(swapImg.src);
+      // }
+
+      // else if (swapImg.src.includes('firefox.webp')) {
+      //   console.log('chrome');
+      //   swapImg.style.animation = '1s all ease';
+      //   swapImg.src = '../DOM/img/chrome.webp';
+      //   console.log(swapImg.src);
+      // }
+
+      const src = swapImg.getAttribute('src');
+      swapImg.setAttribute('style', 'transition:2s fade');
+      console.log(src);
+
+      if(src.includes('chrome')) {
+        swapImg.setAttribute('src', src.replace('chrome', 'firefox'));
+      } else {
+        swapImg.setAttribute('src', src.replace('firefox', 'chrome'));
+      }
+    });
+
+  </script>
+</body>
+</html>

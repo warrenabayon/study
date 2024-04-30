@@ -54,25 +54,47 @@
 
 
     //test 3 /// multipy numeric by 2
-    let menu = {
-      width: 200,
-      height: 300,
-      title: "My menu",
-      title2: "My menu"
-    };
+    // let menu = {
+    //   width: 200,
+    //   height: 300,
+    //   title: "My menu",
+    //   title2: "My menu"
+    // };
 
-    function multiplyNumeric(obj) {
-      for (key in obj) {
-        if (typeof(obj[key]) === 'number') {
-          obj[key] *= 2
-        } 
-        console.log(`${key} : ${obj[key]}`);
+    // function multiplyNumeric(obj) {
+    //   for (key in obj) {
+    //     if (typeof(obj[key]) === 'number') {
+    //       obj[key] *= 2
+    //     } 
+    //     console.log(`${key} : ${obj[key]}`);
 
+    //   }
+    // }
+
+    // multiplyNumeric(menu);
+
+
+      function multi(n1, n2 = 10) {
+        console.log(n1 * n2);
       }
-    }
 
-    multiplyNumeric(menu);
-    
+      multi(4, 7);
+      multi(20, 20);
+      multi(0.5, 3);
+
+      //
+
+      document.querySelector('html').addEventListener('click', () => {
+        alert('touched me');
+      })
+
+      document.querySelector('html').addEventListener('mouseover', () => {
+        console.log('noppe');
+      })
+
+      // document.querySelector('html').addEventListener('mouseleave', () => {
+      //   alert('touched me2');
+      // })
   </script>
 </body>
 </html>
