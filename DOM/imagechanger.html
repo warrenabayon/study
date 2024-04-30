@@ -13,44 +13,73 @@
       display: block;
       
     }
+
+    button {
+      display: block;
+      margin: 0 auto;
+      margin-top: 30px;
+      color: #000;
+      padding: 10px;
+    }
+
+    h1 {
+      margin: 0 auto;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
   
   <img src="../DOM/img/chrome.webp">
+  <h1>USER</h1>
 
   <script>
 
     const swapImg = document.querySelector('img');
-    swapImg.addEventListener('click', ()=> {
-      
-      // console.log(swapImg.src);
+    const clickMeBTN = document.createElement('button');
+          clickMeBTN.innerHTML ='Changer User';
+    document.querySelector('body').append(clickMeBTN);
+    const myHeading = document.querySelector('h1');
 
-      // if (swapImg.src.includes('chrome.webp')) {
-      //   console.log('fire');
-      //   swapImg.style.animation = '1s all ease';
-      //   swapImg.src = '../DOM/img/firefox.webp';
-        
-      //   console.log(swapImg.src);
-      // }
+    swapImg.addEventListener('click', changeIMG);
+    clickMeBTN.addEventListener('click' , setUserName);
 
-      // else if (swapImg.src.includes('firefox.webp')) {
-      //   console.log('chrome');
-      //   swapImg.style.animation = '1s all ease';
-      //   swapImg.src = '../DOM/img/chrome.webp';
-      //   console.log(swapImg.src);
-      // }
+    function changeIMG() {
+      const src = swapImg.getAttribute('src');// get the src value
 
-      const src = swapImg.getAttribute('src');
-      swapImg.setAttribute('style', 'transition:2s fade');
-      console.log(src);
+      swapImg.setAttribute('style', 'transition:2s fade');//test adding style using css
 
+      //set conditions
       if(src.includes('chrome')) {
         swapImg.setAttribute('src', src.replace('chrome', 'firefox'));
       } else {
         swapImg.setAttribute('src', src.replace('firefox', 'chrome'));
       }
-    });
+
+
+    
+    }
+
+
+    function setUserName() {
+        const myName = prompt('Please enter your name','John...')
+        if (!myName) { // check if the pop is null.. empty or canceled... if yes then run it again
+          setUserName();
+
+        } else { // if the myName Is not empy  then run this
+          localStorage.setItem('name', myName);
+          myHeading.textContent = `Mozilla is cool, ${myName}`;;
+        }
+        
+      }
+      
+
+      if (!localStorage.getItem("name")) {
+        setUserName();
+      } else {
+        const storedName = localStorage.getItem("name");
+        myHeading.textContent = `Mozilla is cool, ${storedName}`;
+      }
 
   </script>
 </body>
