@@ -11,37 +11,37 @@
 <script>
 
   //OBJECT CONSTRUCTORS
-  function Player(name, mark) {
-    this.name = name;
-    this.mark = mark;
-    this.sayName = function() {// add function in object constructor
-      return this.name;
-    }
-  }
+  // function Player(name, mark) {
+  //   this.name = name;
+  //   this.mark = mark;
+  //   this.sayName = function() {// add function in object constructor
+  //     return this.name;
+  //   }
+  // }
 
-  Player.prototype.sayHello = function() { // adding methods to  the object prototype
-    return "Hello, I'm a player!";
-  }
+  // Player.prototype.sayHello = function() { // adding methods to  the object prototype
+  //   return "Hello, I'm a player!";
+  // }
 
 
-  //CALL using  'new'
-  const player = new Player('warren', 'X');
-  const player2 = new Player('Roan', 'Y');
-  console.log(player.name);//warren
-  console.log(player.mark);//X
-  console.log(player.sayName() + " " + player.mark);//'warren X'
-  console.log(player2.name);// Roan
+  // //CALL using  'new'
+  // const player = new Player('warren', 'X');
+  // const player2 = new Player('Roan', 'Y');
+  // console.log(player.name);//warren
+  // console.log(player.mark);//X
+  // console.log(player.sayName() + " " + player.mark);//'warren X'
+  // console.log(player2.name);// Roan
 
-  console.log(player2.sayHello());
-  console.log(player.sayHello());// so dito lahat nga ng object na ginawa gamit ng object prototype na Player ay merong same methods and properties
+  // console.log(player2.sayHello());
+  // console.log(player.sayHello());// so dito lahat nga ng object na ginawa gamit ng object prototype na Player ay merong same methods and properties
 
-  console.log(player.valueOf()); // original object
-  console.log(player2.valueOf()); // original object
-  console.log(Player.prototype.valueOf());// object prototype constructor
+  // console.log(player.valueOf()); // original object
+  // console.log(player2.valueOf()); // original object
+  // console.log(Player.prototype.valueOf());// object prototype constructor
 
-  console.log(player.hasOwnProperty('valueOf')); // false
-  console.log(Player.hasOwnProperty('valueOf')); // false
-  console.log(Object.prototype.hasOwnProperty('valueOf'))//true
+  // console.log(player.hasOwnProperty('valueOf')); // false
+  // console.log(Player.hasOwnProperty('valueOf')); // false
+  // console.log(Object.prototype.hasOwnProperty('valueOf'))//true
 
 
   //EXSERCISE 
@@ -60,8 +60,8 @@
 
 
   //PROTOTYPE
-  console.log(Object.getPrototypeOf(player) === Player.prototype); // meaning get mo yong prototype value ng new player tapos compare mo siya sa prototype ng object constructor; /// True
-  console.log(Object.getPrototypeOf(player2) === Player.prototype);//True
+  // console.log(Object.getPrototypeOf(player) === Player.prototype); // meaning get mo yong prototype value ng new player tapos compare mo siya sa prototype ng object constructor; /// True
+  // console.log(Object.getPrototypeOf(player2) === Player.prototype);//True
 
   // console.log(Object.getPrototypeOf(player));
   // console.log(Player.prototype);
@@ -73,6 +73,53 @@
 
 
   //MUTATING PROTOTYPE
+  //NOTE it is commong to use first capital letter on object constructor
+
+  function Person(name){ //Object constructor 
+    this.name = name;
+  }
+
+
+  // adding object methods to object constructor
+  Person.prototype.sayName = function() { 
+  return `Hello, I'm ${this.name}`;
+  }
+
+  function Player(name, marker) {
+    this.name = name;
+    this.marker = marker;
+  }
+
+  Player.prototype.getMarker = function() {
+    return `My marker is '${this.marker}'`;
+  }
+
+ 
+  console.log(Object.getPrototypeOf(Player.prototype)); // returns Object.prototype
+
+  // dito ang object Player ay mag iinherit sa 'Person'.. para pwede silang gumamit ng methods ng isat isa
+  Object.setPrototypeOf(Player.prototype, Person.prototype);
+
+  console.log(Object.getPrototypeOf(Player.prototype)); // returns Person.prototype
+
+  // console.log(Player.prototype);
+
+  const player1 = new Player('Warren', 'X');
+  const player2 = new Player('Roan', 'Y');
+  const person1 = new Person('Hailey');
+
+  console.log(player1.sayName());
+  console.log(player2.sayName());
+
+  console.log(player2.getMarker());
+  console.log(player1.getMarker());
+
+  console.log(person1.sayName());
+
+  console.log(person1.name) // kung meron silang same ng name na mthod ,, hindi ito magagamit ng isa, kundi ang original na talagang kanya
+  console.log(player1.name)
+
+
 
 
 </script>
