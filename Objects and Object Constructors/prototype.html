@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+<script>
+
+  //OBJECT CONSTRUCTORS
+  function Player(name, mark) {
+    this.name = name;
+    this.mark = mark;
+    this.sayName = function() {// add function in object constructor
+      return this.name;
+    }
+  }
+
+  Player.prototype.sayHello = function() { // adding methods to  the object prototype
+    return "Hello, I'm a player!";
+  }
+
+
+  //CALL using  'new'
+  const player = new Player('warren', 'X');
+  const player2 = new Player('Roan', 'Y');
+  console.log(player.name);//warren
+  console.log(player.mark);//X
+  console.log(player.sayName() + " " + player.mark);//'warren X'
+  console.log(player2.name);// Roan
+
+  console.log(player2.sayHello());
+  console.log(player.sayHello());// so dito lahat nga ng object na ginawa gamit ng object prototype na Player ay merong same methods and properties
+
+  console.log(player.valueOf()); // original object
+  console.log(player2.valueOf()); // original object
+  console.log(Player.prototype.valueOf());// object prototype constructor
+
+  console.log(player.hasOwnProperty('valueOf')); // false
+  console.log(Player.hasOwnProperty('valueOf')); // false
+  console.log(Object.prototype.hasOwnProperty('valueOf'))//true
+
+
+  //EXSERCISE 
+  // function Book(title, author, pages, read) {
+  //   this.title = title;
+  //   this.author = author;
+  //   this.pages = pages;
+  //   this.read = read;
+  //   this.info = () => {
+  //     return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read}`;
+  //   }
+  // }
+
+  // const theHobbit = new Book('The Hobbit', 'J.R.R Tolkien', 295, 'not read yet')
+  // console.log(theHobbit.info());
+
+
+  //PROTOTYPE
+  console.log(Object.getPrototypeOf(player) === Player.prototype); // meaning get mo yong prototype value ng new player tapos compare mo siya sa prototype ng object constructor; /// True
+  console.log(Object.getPrototypeOf(player2) === Player.prototype);//True
+
+  // console.log(Object.getPrototypeOf(player));
+  // console.log(Player.prototype);
+ 
+
+  //so lahat ng object na nacreate gamit ang object new constructor ay maroon same value ng prototype
+  // so lahat ng variable value or methods na defined sa Object Constructor function ay meron din ang mga objects(player) na ginawa mula dito.
+ 
+
+
+  //MUTATING PROTOTYPE
+
+
+</script>
+</body>
+</html>
