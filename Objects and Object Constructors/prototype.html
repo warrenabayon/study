@@ -94,8 +94,13 @@
     return `My marker is '${this.marker}'`;
   }
 
+  Player.prototype.getMarker2 = function() {
+    return `My marker is '${this.marker}'`;
+  }
+
  
-  console.log(Object.getPrototypeOf(Player.prototype)); // returns Object.prototype
+  console.log(Player.prototype); // returns Object.prototype
+
 
   // dito ang object Player ay mag iinherit sa 'Person'.. para pwede silang gumamit ng methods ng isat isa
   Object.setPrototypeOf(Player.prototype, Person.prototype);
@@ -120,8 +125,38 @@
   console.log(player1.name)
 
 
+//MY TEST
+
+function School(name, level, address) {
+  this.name = name;
+  this.level = level;
+  this.address = address;
+}
+
+School.prototype.info = function() {
+  return `my school is ${this.name}`;
+}
+
+function Teacher(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+Teacher.prototype.greet = function(){
+  return `Hi! I'm ${this.name}`;
+}
+
+console.log(Object.getPrototypeOf(Teacher.prototype));
+//to mutate
+Object.setPrototypeOf(Teacher.prototype, School.prototype);
+console.log(Object.getPrototypeOf(Teacher.prototype))
 
 
+const teacherHigh = new Teacher('Warren', 31);
+const teacherCOL = new Teacher('Roan', 30);
+
+console.log(teacherCOL.info());
+console.log(teacherHigh.info());
 </script>
 </body>
 </html>
