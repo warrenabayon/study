@@ -132,22 +132,29 @@
 
 ///Unpacking properties from objects passed as a function parameter
 
-const user = {
-  id: 32,
-  name: 'warren',
-  fullName: {
-    fname: 'roan',
-    lname:'abayon',
-  }
-}
+// const user = {
+//   id: 32,
+//   name: 'warren',
+//   fullName: {
+//     fname: 'roan',
+//     lname:'abayon',
+//   }
+// }
 
-function getUserId({id}) {
-  return id;
+// function getUserId({id}) {
+//   return id;
 
-}
+// }
 
-console.log(getUserId(user)); //32
+// console.log(getUserId(user)); //32
 
+
+//1 SWAP VALUES
+let a = 3;
+let b = 10;
+
+[a, b] = [b, a]; //we swap 
+console.log(a, b); // a = 10 and b = 3
 
 
 
