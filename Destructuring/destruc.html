@@ -150,17 +150,55 @@
 
 
 //1 SWAP VALUES
-let a = 3;
-let b = 10;
+// let a = 3;
+// let b = 10;
 
-[a, b] = [b, a]; //we swap 
-console.log(a, b); // a = 10 and b = 3
+// [a, b] = [b, a]; //we swap 
+// console.log(a, b); // a = 10 and b = 3
 
 // 2. SWAP emelemt in ARRAY
-const colors = ['red', 'green', 'blue', 'yellow' ,'white', 'black'];
-//we want red and black swap places
-[colors[0], colors[5]] = [colors[5], colors[0]];
-console.log(colors);
+// const colors = ['red', 'green', 'blue', 'yellow' ,'white', 'black'];
+// //we want red and black swap places
+// [colors[0], colors[5]] = [colors[5], colors[0]];
+// console.log(colors);
+
+//3 ASSIGN ARRAY ELEMENTS TO VARIABLES
+// const [firstClr, secondClr, thirdClr, ...extraClr] = colors;
+// console.log(firstClr,secondClr,thirdClr);
+// console.log(extraClr);
+
+//4 EXTRACT VALUES FROM OBJECT
+const person1 = {
+  fname: 'Warren',
+  lname: 'Roan',
+  age: 32,
+  job: 'None',
+}
+
+const person2 = {
+  fname: 'Warren',
+  lname: 'Roan',
+  age: 32,
+
+}
+
+const {fname, lname, age, myJob = 'WEB DEV' } = person2; // assign default value
+
+console.log(fname);//Warren
+
+// assign the value to a different variable
+const {lname: lastname} = person1;
+console.log(lastname, myJob);//Roan
+
+
+//5 DESTRUCTURE IN FUNCTION PARAMETERS
+function displayPerson({fname, lname, age, job: work = 'DEsign'}) {//destructure again si object person1 dito, bag assign din tayo ng default value na inassign pa natin sa variable
+  console.log(`name: ${fname} ${lname}. and I'm ${age} year old, My work is ${work}`);
+};
+
+displayPerson(person1);
+displayPerson(person2);
+
 
 
   </script>
