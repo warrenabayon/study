@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+
+  <script>
+
+
+
+//count down a number using recursion
+
+function recursion(num) {
+  console.log(num)
+  if (num > 1) {
+    num -= 1; // minus 1 num 4
+    recursion(num); // run function na may new value ni num
+  } else {
+    return;
+  }
+}
+recursion(5);
+
+//print string in reverse using recursion
+
+
+function reverseString(str) {
+  if (str === '') {
+    return '';
+  }
+
+  return reverseString(str.substr(1)) + str[0];
+}
+
+
+console.log(reverseString('Hello'));
+
+  </script>
+  
+</body>
+</html>
+

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+
+  <script>
+
+    // const obj = { a:1, b:2};
+    // const {a, b} = obj;
+    // // this creates two variables , a and b,
+    // // which is equal to
+    // // const a = obj.a
+    // // const b = obj.b
+    // console.log(a);// 1
+    // console.log(b); // 2
+
+    // //array destructuring
+    // const array = [1,2,3,4,5,6,7];
+    // const [zeroElem, firstElem , ...rest] = array;
+    // console.log(zeroElem);// 1
+    // console.log(firstElem); // 2
+    // console.log(rest); // the rest of the array
+
+    // const arrayDefaultValue = [];
+    // const [val1 = 'test', val2 = 1] = arrayDefaultValue;
+
+    // console.log(val1);
+
+    // ////
+    // const foo = ['one', 'two'];
+    // const [red, yellow, green, blue = 'tesss'] = foo;
+    // console.log(green);// undefined
+    // console.log(blue) // tessss
+
+    // //parsing an array which is returned by a function
+    // function f() {
+    //   return [9, 10];// array returned
+    // }
+
+    // const [f1, f2] = f();
+    // console.log(f1); //9
+    // console.log(f2); //10
+
+    // //ignoring or skipping some values you dont want
+
+    // function fIgnore() {
+    //   return [3, 2, 1];
+    // }
+    // const [i1, , i3] = fIgnore();
+    // console.log(i1); // 3
+    // console.log(i3); // 1
+
+
+    //Using a binding pattern as the rest property
+
+    // const [a ,b, ...{length}] = [1, 2, 3,4]; //legth will get the leght of rest
+    // console.log(a, b, length); //1 2 2
+
+    // const [a, b, ...[c, d]] = [1,2,3,4];
+    // console.log(a ,b ,c ,d); // 1 2 3 4 // c = rest[0]
+
+    // const testRest = [n1, n2, ...rests ] = [1,2,3,4,5,6,7,8,9];
+    // console.log(rests.length); // 7 get the length of the ...rest 
+    // console.log(rests[1]); //4 get the specific element in the rest using index method 
+
+  // binding can also be nested
+
+  //  const [a, b, ...[c, d, ...[e, f]]] = [1, 2, 3, 4, 5, 6];
+
+  //  console.log(a, b, c, d, e, f); /// 1 2 3 4 5 6 // rest can be nested
+
+  //  //TEST 2
+
+  //  const[n1, n2, ...[, n3,n4, ...rest]] = [1,2,3,4,5,6,7,8,9];
+
+  //  console.log(n1 , n2, n3, n4, rest);
+
+  // const [a, b] = new Map([[1, 2], [2,4],]);
+
+  // console.log(a, b);
+
+  //Object Destructuring
+
+  // const user = {
+  //   name: 'warren',
+  //   age: 32,
+  //   isMaried: true,
+  // }
+
+  // const {name, age, isMaried} = user;
+
+  // console.log(name, age, isMaried);//warren 32 true
+
+
+  //assign to new variable name
+
+  // const myObj = {
+  //   // edad: , //test for not declare
+  //   ngalan: 'warren',
+  //   status: 'maried',
+  //   isMale:true,
+  
+  // }
+
+  // //assign it now
+  // const {
+  //   edad: age,
+  //   ngalan: name,
+  //   status: kasal,
+  //   isMale: gender, 
+  // } = myObj;
+
+  // // console.log(age, name, kasal, gender);/// 32
+
+  // //adding default vallue
+
+  // const {
+  //   edad: age2 = 25,
+  //   ngalan: name2 = 'roan',
+  //   status: kasal2 = 'oo',
+  //   isMale: gender2 = 'male',
+  // } = myObj;
+  // console.log(age2, name2);
+
+
+
+///Unpacking properties from objects passed as a function parameter
+
+const user = {
+  id: 32,
+  name: 'warren',
+  fullName: {
+    fname: 'roan',
+    lname:'abayon',
+  }
+}
+
+function getUserId({id}) {
+  return id;
+
+}
+
+console.log(getUserId(user)); //32
+
+
+
+
+  </script>
+</body>
+</html>
+
+
+
+
+
+

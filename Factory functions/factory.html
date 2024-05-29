@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    const User = function (name) {
+  this.name = name;
+  this.discordName = "@" + name;
+}
+// hey, this is a constructor - 
+// then this can be refactored into a factory!
+
+function createUser (name) {
+  const discordName = "@" + name;
+  return { name, discordName };
+}
+
+console.log(createUser('warren').discordName)
+// and that's very similar, except since it's just a function,
+// we don't need a new keyword
+
+//my sample
+
+function myPerson (name, isMaried) {
+  const info = `name: ${name} , status: ${isMaried}`;
+  return {name, isMaried, info};
+}
+
+console.log(myPerson('roan', true).isMaried);
+
+
+/// test loop on object
+
+const loopObj = {
+  name: 'warren',
+  age: 32,
+  isMarried:  true,
+};
+
+loopObj.forEach((val, index, arr) => {
+  console.log(val);
+});
+
+
+  </script>
+</body>
+</html>

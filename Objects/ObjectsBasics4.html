@@ -10,30 +10,31 @@
 
 
   <script>
-    /*
 
-    const user = {};
-    user.name = 'Warren';
-    user['surname'] = 'Abayon';
-    user['name'] = 'Roan';
-    delete user.name;
-    // console.log(user);
+
+  //   const user = {};
+  //   user.name = 'Warren';
+  //   user['surname'] = 'Abayon';
+  //   user['name'] = 'Roan';
+  //   // delete user.name;
+  //   // console.log(user);
   
 
 
 
-  const isEmpty = (user)=> {
+  // const isEmpty = (users)=> {
     
-    for (let key in user) {
-      console.log(user[key])
-      return false;
-    }
-    return true;
+  //   for (let key in users) {
+  //     console.log(users[key])
+  //     // console.log(key)
+  //     // return false;
+  //   }
+  //   // return true;
     
-  }
+  // }
 
-  console.log(isEmpty(user)); // false.. meron laman ang user
-  */
+  // console.log(isEmpty(user)); // false.. meron laman ang user
+ 
 
 
   /*
@@ -82,17 +83,69 @@ const multiplyNumeric = (menu)=> {
  multiplyNumeric(menu);
  */
 
- function Person(name='warren', age= 32) {
-    this.name = name;
-    this.age = age;
-    this.greetings = ()=> {
-      console.log(`I'm ${this.name} and I'm ${this.age} years old`);
-    }
- }
+//  function Person(name='warren', age= 32) {
+//     this.name = name;
+//     this.age = age;
+//     this.greetings = ()=> {
+//       console.log(`I'm ${this.name} and I'm ${this.age} years old`);
+//     }
+//  }
 
- const warren = new Person();
+//  const warren = new Person();
  
-  warren.greetings();
+//   warren.greetings();
+
+
+///object loop practice
+
+const population = {
+  male: 200,
+  female: 300,
+  others: 10,
+}
+
+
+// const totalPopulation = (populate) => {
+//   let total = 0;
+//   for (let key in populate) {
+//     if (populate[key] < 20) {
+//       console.log(populate[key]);
+//     }
+  
+//   }
+// }
+
+// totalPopulation(population);
+
+// loop object with static methods.. dito ginagawang array 
+
+//Object.keys
+//Object.values
+//Object.entries
+
+const genders = Object.keys(population)// need lang ay yung keys ng object
+
+//now pwede na siyang array methods
+genders.forEach(gender => {
+  if(gender.includes('ale')) {
+    console.log(gender);
+  }
+});
+
+//using values naman
+const detail = Object.values(population);//value
+
+const total = detail.reduce((a, b) => a + b);//get  the sum
+console.log(total);
+
+
+let sum2 = 0;
+detail.forEach(val => {
+  sum2 += val;
+})
+
+console.log(sum2);
+
 
   </script>
  

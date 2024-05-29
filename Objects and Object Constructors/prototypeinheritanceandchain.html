@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+
+    //a game sample
+    // template character
+    // add method greet// method is suggested to be added in the prototype
+    // character class
+
+    
+
+    function Hero (name, level) {
+      this.name = name;
+      this.level = level;
+
+    }
+
+    Hero.prototype.greet = function() {
+      return `Good Day ! ${this.name}`;
+    }
+
+    function Swordsmen(name, level, weapon) {
+      Hero.call(this, name, level)
+      this.weapon = weapon;
+    }
+
+    Swordsmen.prototype.attack = function() {
+      return `${this.name} usedmen ${this.weapon}`;
+    }
+
+    function Archer(name, level, weapon) {
+      Hero.call(this, name, level)
+      this.weapon = weapon;
+    }
+
+    Archer.prototype.arrow = function() {
+      return `${this.name} usedher ${this.weapon}`;
+    }
+
+
+    //mutate the onbject funtions constructors 
+
+    Swordsmen.__proto__ = Hero;
+  Object.setPrototypeOf(Archer.prototype, Hero.prototype);
+  // Object.setPrototypeOf(Archer.prototype, Hero.prototype);
+  Object.setPrototypeOf(Swordsmen.prototype, Archer.prototype);
+
+  const heroSword = new Swordsmen('warren', 1, 'swords');
+  const heroArcher = new Archer('roan', 1 , 'Bow')
+
+ 
+  console.log(heroSword.arrow());
+  console.log(heroArcher.attack());
+  
+  
+
+
+  </script>
+</body>
+</html>
+
+
+
+
