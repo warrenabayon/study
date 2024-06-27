@@ -8,44 +8,64 @@
 <body>
   
   <script>
-    const User = function (name) {
-  this.name = name;
-  this.discordName = "@" + name;
-}
-// hey, this is a constructor - 
-// then this can be refactored into a factory!
+//     const User = function (name) {
+//   this.name = name;
+//   this.discordName = "@" + name;
+// }
+// // hey, this is a constructor - 
+// // then this can be refactored into a factory!
 
-function createUser (name) {
+// function createUser (name) {
+//   const discordName = "@" + name;
+//   return { name, discordName };
+// }
+
+// console.log(createUser('warren').discordName)
+// // and that's very similar, except since it's just a function,
+// // we don't need a new keyword
+
+// //my sample
+
+// function myPerson (name, isMaried) {
+//   const info = `name: ${name} , status: ${isMaried}`;
+//   return {name, isMaried, info};
+// }
+
+// console.log(myPerson('roan', true).isMaried);
+
+
+// /// test loop on object
+
+// const loopObj = {
+//   name: 'warren',
+//   age: 32,
+//   isMarried:  true,
+// };
+
+// loopObj.forEach((val, index, arr) => {
+//   console.log(val);
+// });
+
+function createUser(name) {
   const discordName = "@" + name;
-  return { name, discordName };
+
+  let reputation = 0
+  const getReputation = () => reputation;
+  const giveReputation = () => reputation++;
+
+  return {name, discordName, getReputation, giveReputation};
 }
 
-console.log(createUser('warren').discordName)
-// and that's very similar, except since it's just a function,
-// we don't need a new keyword
+const warren = createUser('warren');
+warren.giveReputation(); // +1
+warren.giveReputation(); // +1
 
-//my sample
-
-function myPerson (name, isMaried) {
-  const info = `name: ${name} , status: ${isMaried}`;
-  return {name, isMaried, info};
-}
-
-console.log(myPerson('roan', true).isMaried);
-
-
-/// test loop on object
-
-const loopObj = {
-  name: 'warren',
-  age: 32,
-  isMarried:  true,
-};
-
-loopObj.forEach((val, index, arr) => {
-  console.log(val);
-});
-
+console.log(
+  {
+    discordName: warren.discordName,
+    reputation: warren.getReputation(),
+  }
+)
 
   </script>
 </body>
