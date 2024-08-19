@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex Box Practice</title>
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+    .flex-container {
+      display: flex;
+      gap: 10px;
+    }
+
+    .item {
+      flex: 1;
+      background: yellow;
+      border: 2px solid grey;
+      padding: 20px;
+      flex-basis: auto;
+
+      /* setting up flex-basis to auto is important for items that has a width set tp like 200px , so that it would not be ignored */
+      
+    }
+
+    .inside-flex {
+      display: flex;
+       width: 200px;
+    }
+
+    .two {
+      flex: 2;
+      width: 200px;
+    }
+
+    .one {
+      width: 200px;
+      flex-shrink: 0;
+    }
+    
+    .three {
+      width: 200px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="flex-container">
+    <div class="item one">
+      <div class="inside-flex">
+        this is a flex inside
+      </div>
+    </div>
+    <div class="item two">two</div>
+    <div class="item three">three</div>
+  </div>
+  
+</body>
+</html>
