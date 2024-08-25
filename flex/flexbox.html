@@ -12,6 +12,8 @@
     .flex-container {
       display: flex;
       gap: 10px;
+      flex-direction: column;
+    
     }
 
     .item {
@@ -19,7 +21,8 @@
       background: yellow;
       border: 2px solid grey;
       padding: 20px;
-      flex-basis: auto;
+      /* flex-basis: auto; */
+      /* height: 100px; */
 
       /* setting up flex-basis to auto is important for items that has a width set tp like 200px , so that it would not be ignored */
       
