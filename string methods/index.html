@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>String Methods</title>
+</head>
+<body>
+<h1>
+  String Methods
+</h1>
+
+
+
+
+
+  <script>
+    
+//STRING Length
+  // let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  // let length = text.length;
+  // alert(length);
+
+
+//EXTRACTING String Characters
+//at, charAt, chardCodeAt
+//--charAt ---- get the position number of a letter
+  // let text = 'HELLOW WORLD';
+  // let char = text.charAt(0);
+  // alert(char);
+//--chardCodeAt -- ge the utf code value of the position
+    // let text ="HELLO WORKD";
+    // let char = text.charCodeAt(0);
+    // alert(char);
+//--at ---- is a new methods allows the use of negative(- for position)
+    // let text = "HELLO WORKD";
+    // let char = text.at(2);
+    // alert(char);
+
+//Property Access []
+    // let text = "HELLOW WORLD";
+    // let char = text[0];
+    // alert(char);
+
+
+//EXTRACTING String Parts
+//slice, substring, substr
+//---String Slice ---- get the sliced part of string
+    // let text = "Apple, Banana, Kiwi";
+    // let part = text.slice(7, 13);
+    // let part2 = text.slice(7); // this will slice the rest start from 7
+    // let part3 = text.slice(-5); // if parameter is negative it will start the count from the end of the string
+    // let part4 = text.slice(-12, - 6); // starts in the end
+    // alert(part4);
+
+//---substring() ----- similar to slice(), different is that start and end less that 0 are treated as 0
+    // let text =  "Apple, Banana, Kiwi";
+    // let part = text.substring(7, 13);// if you omit the second parameter it will slice out the rest of the string
+    // alert(part);
+
+//---substr --- is also similar to slice , but the second parameter specifies the length of the extracted part.
+    // let text =  "Apple, Banana, Kiwi";
+    // let part = text.substr(7,6)// sliced start at 7 then end the 6th letter 
+    // alert(part); // omiting the second parameter will also slice the rest of the string and if the first parameter is negative it will start the count at the end of string
+
+
+
+
+
+  </script>
+  
+</body>
+</html>
