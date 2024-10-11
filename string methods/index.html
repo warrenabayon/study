@@ -63,8 +63,85 @@
     // let part = text.substr(7,6)// sliced start at 7 then end the 6th letter 
     // alert(part); // omiting the second parameter will also slice the rest of the string and if the first parameter is negative it will start the count at the end of string
 
+//CONVERTING to UPPER and LOWER Case
+//--toUpperCase()
+    // let text = "Hellow World";
+    // let upper = text.toUpperCase();
+    // alert(upper);
+
+// --toLowerCase()
+    // let text = 'Hellow World';
+    // let lower = text.toLowerCase();
+    // alert(lower);
+
+//STRING concat() ---- joining two strings
+    // let text1 = 'Hellow';
+    // let text2 = 'WORLD';
+    // let text3 = text1.concat(' ', text2);
+    // let text4 = "Hello".concat(' ', 'World');// instead of + operator
+    // alert(text3);
 
 
+///STRING trim()
+//----trim() methods removes the whitespace both sides of string
+    // let text = '     Hello World       ';
+    // let text2 = text.trim();
+    // alert(text2);
+
+//---trimStart() ---- similar to trim but removes space only in the start
+    // let text = '      HELLOW WORLD!       ';
+    // let text1 = text.trimStart();
+    // alert(text1);
+
+//----trimEnd()----removes space at the end
+    // let text = "    hELLOW WORKD!     ";
+    // let text2 = text.trimEnd();
+    // alert(text2);
+
+///STRING Padding
+//---String padStart() --- add padding in the start
+    // let text = "5";
+    // let text2 = text.padStart('4','0');// padd a string with 0 until it reaches the lenght of 4 (first parameter)
+    // alert(text2); // 0005
+
+//----String padEnd() --- add padding to the end
+    // let text = '5';
+    // let text2 = text.padEnd(4, '0');
+    // alert(text2); /// 5000
+
+//note to padd a number ,, needs to conver the number to string
+    // let num = 5 ;
+    // let text = num.toString();
+    // let padded = text.padStart(5, 'x');
+    // alert(padded); /// xxxx5
+
+///STRING repeat() ---- returns a string with a number of copies of a string
+    // let text = "Hello World ";
+    // let result = text.repeat(2).trimEnd(); //Hello WorldHello World
+    // alert(result);
+
+//STRING REPLACE
+//---replace() ---- replace a value with another value in a string
+    // let text = "Please visit Microsoft!";
+    // let rep = text.replace('Microsoft', 'W3SCHOOLS');
+    // alert(text);
+    //replace the first match only
+    //case sensitive
+
+    // let text = "Please visit Microsoft!";
+    // let newText = text.replace(/MICROSOFT/i, 'W3SCHOOLS'); // Make it insensitive
+    // alert(newText);
+
+    //-----repalce all matches
+    // let text = "Please visit Microsoft and Microsoft!";
+    // let newText = text.replace(/Microsoft/g, "W3SCHOOLS");
+    // alert(newText);
+
+// //STRING  replaceALl()
+//     let text = "I love cats. Cats are very easy to love. Cats are very popular.";
+//     text = text.replaceAll('Cats', 'Dogs');//replace all cats with dogs
+//     text = text.replaceAll('cats', 'dogs');//replace all cats with dogs
+//     alert(text); 
 
 
   </script>
